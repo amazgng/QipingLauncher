@@ -1,0 +1,60 @@
+Personalization checks completed
+PASS five-category home starts on API 28
+PASS P15 quick settings opens personalization
+PASS P15 remote moves home category
+PASS P15 remote hides home category
+PASS P15 hidden home keeps essential access
+PASS P15 custom home spacing order 1
+PASS P15 custom home spacing order 2
+PASS P15 custom home spacing order 3
+PASS P15 custom home spacing order 4
+PASS P15 remote skips hidden category
+PASS P15 custom home Up reaches settings
+PASS P15 custom home restores previous tile
+PASS P15 all optional home entries can hide safely
+PASS P15 right edge opens all apps after reorder
+PASS P15 move app across pages to front
+PASS P15 focus follows moved app
+PASS P15 hidden app removed from normal list
+PASS P15 hidden app can be restored by remote
+PASS P15 all-hidden empty state retains recovery button
+PASS P15 binding picker still includes hidden apps
+PASS P15 show all restores full catalog
+PASS P15 restore default application order
+PASS P15 layout lock blocks app organizer mutation
+PASS P15 launcher window focused
+PASS P15 saver delay saved by remote
+PASS P15 preview enters wallpaper clock
+PASS P15 wake Confirm does not activate tile
+PASS P15 wake preserves selected tile
+PASS P15 idle timeout enters screensaver
+PASS P15 first Back exits only screensaver
+PASS P15 all-apps screen never enters saver
+PASS P15 modal settings prevents saver
+PASS P15 activity ignores navigation behind modal during window transition
+PASS P15 startup countdown prevents saver
+PASS P15 launch feedback uses visible overlay
+PASS P15 launch feedback releases glass view references
+PASS P15 wallpaper stored for scene 0
+PASS P15 wallpaper stored for scene 1
+PASS P15 wallpaper stored for scene 2
+PASS P15 wallpaper stored for scene 3
+PASS P15 wallpaper stored for scene 4
+PASS P15 wallpaper stored for scene 5
+PASS P15 oversized source downsampled before saving
+PASS P15 invalid image preserves prior wallpaper
+PASS P15 cancelled import preserves prior wallpaper
+PASS P15 20 MB bound preserves wallpaper on oversize import
+PASS P15 EXIF portrait orientation applied
+PASS P15 owned wallpaper survives source removal
+PASS P15 remote restores built-in wallpaper
+PASS P15 picker result imports asynchronously
+PASS P15 picker result consumes pending scene
+PASS P15 repeat launch does not advance pending request
+PASS P15 external app stops saver and launch overlay
+PASS P15 idle callback cannot cover external video app
+PASS P15 returning from app clears launch lock
+PASS P15 new preferences reload without relying on view state
+PASS P15 personalization fits large-font safe area 1
+PASS P15 personalization fits large-font safe area 2
+

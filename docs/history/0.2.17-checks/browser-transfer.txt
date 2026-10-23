@@ -1,0 +1,21 @@
+PASS browser QR session connects
+PASS browser session token removed from address bar
+PASS browser television category preselected
+PASS browser 390 px layout has no horizontal overflow
+PASS browser oversized image rejected before upload
+PASS browser invalid selection cannot upload
+PASS browser valid selection enables upload
+PASS browser pending TV approval prevents another upload
+PASS browser concurrent image returns readable guidance
+PASS browser phone receives TV approval
+PASS browser polling does not erase next selected image
+PASS browser second upload keeps selected category
+PASS browser phone receives TV discard
+PASS browser manual address asks for code
+PASS browser incorrect pairing code explained
+PASS browser manual pairing connects
+PASS browser 320 px screen has no horizontal overflow
+PASS browser no JavaScript errors
+PASS browser no external page dependencies
+PASS browser disconnection stops polling and disables upload
+PASS: Phone browser 20 checks

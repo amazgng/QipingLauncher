@@ -1,0 +1,568 @@
+PASS five-category home starts on API 28
+PASS glass: installed package requires Android 9 / API 28
+PASS glass: control dock0
+PASS glass: wallpaper decoded for scene 0
+PASS glass: wallpaper decoded for scene 1
+PASS glass: D-pad focus retained on category 1
+PASS glass: wallpaper decoded for scene 2
+PASS glass: D-pad focus retained on category 2
+PASS glass: wallpaper decoded for scene 3
+PASS glass: D-pad focus retained on category 3
+PASS glass: same play glyph changes pigment with wallpaper
+PASS glass: glass inherits cool coast and warm dune hues (ff616c7a / ff5f5957)
+PASS glass: wallpaper decoded for scene 4
+PASS glass: D-pad focus retained on category 4
+PASS glass: control home_settings
+PASS glass: glass quick settings available
+PASS glass: wallpaper decoded for scene 5
+PASS glass: full settings uses dedicated mist wallpaper
+PASS glass: Back from full settings restores quick settings
+PASS glass: Back closes quick settings before the next test
+PASS glass: control dock0
+PASS glass: wallpaper decoded for scene 0
+PASS horizontal dock fits: margin=0, large=0, entry=0
+PASS horizontal dock fits: margin=0, large=0, entry=1
+PASS horizontal dock fits: margin=0, large=0, entry=2
+PASS horizontal dock fits: margin=0, large=0, entry=3
+PASS horizontal dock fits: margin=0, large=0, entry=4
+PASS hero text fits: margin=0, large=0
+PASS settings heading fits: margin=0, large=0, entry=0
+PASS settings heading fits: margin=0, large=0, entry=1
+PASS settings heading fits: margin=0, large=0, entry=2
+PASS settings heading fits: margin=0, large=0, entry=3
+PASS settings heading fits: margin=0, large=0, entry=4
+PASS settings heading fits: margin=0, large=0, entry=5
+PASS settings heading fits: margin=0, large=0, entry=6
+PASS settings heading fits: margin=0, large=0, entry=7
+PASS settings heading fits: margin=0, large=0, entry=8
+PASS margin dialog opens in display combination 0/0
+PASS dialog stays in safe area 0/0
+PASS background focus clears while dialog is active 0/0
+PASS dialog returns focus 0/0
+PASS horizontal dock fits: margin=0, large=1, entry=0
+PASS horizontal dock fits: margin=0, large=1, entry=1
+PASS horizontal dock fits: margin=0, large=1, entry=2
+PASS horizontal dock fits: margin=0, large=1, entry=3
+PASS horizontal dock fits: margin=0, large=1, entry=4
+PASS hero text fits: margin=0, large=1
+PASS settings heading fits: margin=0, large=1, entry=0
+PASS settings heading fits: margin=0, large=1, entry=1
+PASS settings heading fits: margin=0, large=1, entry=2
+PASS settings heading fits: margin=0, large=1, entry=3
+PASS settings heading fits: margin=0, large=1, entry=4
+PASS settings heading fits: margin=0, large=1, entry=5
+PASS settings heading fits: margin=0, large=1, entry=6
+PASS settings heading fits: margin=0, large=1, entry=7
+PASS settings heading fits: margin=0, large=1, entry=8
+PASS margin dialog opens in display combination 0/1
+PASS dialog stays in safe area 0/1
+PASS background focus clears while dialog is active 0/1
+PASS dialog returns focus 0/1
+PASS horizontal dock fits: margin=1, large=0, entry=0
+PASS horizontal dock fits: margin=1, large=0, entry=1
+PASS horizontal dock fits: margin=1, large=0, entry=2
+PASS horizontal dock fits: margin=1, large=0, entry=3
+PASS horizontal dock fits: margin=1, large=0, entry=4
+PASS hero text fits: margin=1, large=0
+PASS settings heading fits: margin=1, large=0, entry=0
+PASS settings heading fits: margin=1, large=0, entry=1
+PASS settings heading fits: margin=1, large=0, entry=2
+PASS settings heading fits: margin=1, large=0, entry=3
+PASS settings heading fits: margin=1, large=0, entry=4
+PASS settings heading fits: margin=1, large=0, entry=5
+PASS settings heading fits: margin=1, large=0, entry=6
+PASS settings heading fits: margin=1, large=0, entry=7
+PASS settings heading fits: margin=1, large=0, entry=8
+PASS margin dialog opens in display combination 1/0
+PASS dialog stays in safe area 1/0
+PASS background focus clears while dialog is active 1/0
+PASS dialog returns focus 1/0
+PASS horizontal dock fits: margin=1, large=1, entry=0
+PASS horizontal dock fits: margin=1, large=1, entry=1
+PASS horizontal dock fits: margin=1, large=1, entry=2
+PASS horizontal dock fits: margin=1, large=1, entry=3
+PASS horizontal dock fits: margin=1, large=1, entry=4
+PASS hero text fits: margin=1, large=1
+PASS settings heading fits: margin=1, large=1, entry=0
+PASS settings heading fits: margin=1, large=1, entry=1
+PASS settings heading fits: margin=1, large=1, entry=2
+PASS settings heading fits: margin=1, large=1, entry=3
+PASS settings heading fits: margin=1, large=1, entry=4
+PASS settings heading fits: margin=1, large=1, entry=5
+PASS settings heading fits: margin=1, large=1, entry=6
+PASS settings heading fits: margin=1, large=1, entry=7
+PASS settings heading fits: margin=1, large=1, entry=8
+PASS margin dialog opens in display combination 1/1
+PASS dialog stays in safe area 1/1
+PASS background focus clears while dialog is active 1/1
+PASS dialog returns focus 1/1
+PASS horizontal dock fits: margin=2, large=0, entry=0
+PASS horizontal dock fits: margin=2, large=0, entry=1
+PASS horizontal dock fits: margin=2, large=0, entry=2
+PASS horizontal dock fits: margin=2, large=0, entry=3
+PASS horizontal dock fits: margin=2, large=0, entry=4
+PASS hero text fits: margin=2, large=0
+PASS settings heading fits: margin=2, large=0, entry=0
+PASS settings heading fits: margin=2, large=0, entry=1
+PASS settings heading fits: margin=2, large=0, entry=2
+PASS settings heading fits: margin=2, large=0, entry=3
+PASS settings heading fits: margin=2, large=0, entry=4
+PASS settings heading fits: margin=2, large=0, entry=5
+PASS settings heading fits: margin=2, large=0, entry=6
+PASS settings heading fits: margin=2, large=0, entry=7
+PASS settings heading fits: margin=2, large=0, entry=8
+PASS margin dialog opens in display combination 2/0
+PASS dialog stays in safe area 2/0
+PASS background focus clears while dialog is active 2/0
+PASS dialog returns focus 2/0
+PASS horizontal dock fits: margin=2, large=1, entry=0
+PASS horizontal dock fits: margin=2, large=1, entry=1
+PASS horizontal dock fits: margin=2, large=1, entry=2
+PASS horizontal dock fits: margin=2, large=1, entry=3
+PASS horizontal dock fits: margin=2, large=1, entry=4
+PASS hero text fits: margin=2, large=1
+PASS settings heading fits: margin=2, large=1, entry=0
+PASS settings heading fits: margin=2, large=1, entry=1
+PASS settings heading fits: margin=2, large=1, entry=2
+PASS settings heading fits: margin=2, large=1, entry=3
+PASS settings heading fits: margin=2, large=1, entry=4
+PASS settings heading fits: margin=2, large=1, entry=5
+PASS settings heading fits: margin=2, large=1, entry=6
+PASS settings heading fits: margin=2, large=1, entry=7
+PASS settings heading fits: margin=2, large=1, entry=8
+PASS margin dialog opens in display combination 2/1
+PASS dialog stays in safe area 2/1
+PASS background focus clears while dialog is active 2/1
+PASS dialog returns focus 2/1
+PASS selected category does not keep a second focus ring in toolbar
+PASS no page buttons in application grid
+PASS right edge pages to same first row
+PASS left edge returns to previous row end
+PASS second-row edge preserves row
+PASS second-row back page restores edge
+PASS one-item final page is reachable
+PASS final edge never focuses empty slots
+PASS short final page returns to populated row
+PASS top row reaches a focusable toolbar control: apps_updates
+PASS toolbar Right reaches refresh
+PASS toolbar down restores prior grid focus
+PASS menu key opens app management
+PASS closing management preserves grid focus
+PASS long center opens management without a Menu button
+PASS releasing long center does not activate first dialog action
+PASS left edge of first normal page returns home
+PASS home right edge enters all apps
+PASS left edge never cancels app binding
+PASS real JSON parser accepts valid update catalog
+PASS malformed catalog rejected
+PASS malformed catalog rejected
+PASS malformed catalog rejected
+PASS malformed catalog rejected
+PASS bound home tile receives update badge
+PASS normal OK on badged app offers remote update action
+PASS update dialog supports horizontal footer navigation
+PASS postponing retains truthful update badge
+PASS installed newer version clears application badge
+PASS app grid shares home update state
+PASS remote update action opens configured test-store activity
+PASS returning from store restores launcher
+PASS R2 all apps retains old tools and adds both list entries
+PASS R2 Right reaches collection entry
+PASS R2 empty history has actionable focus
+PASS R2 remote turns history off
+PASS R2 successful launch while recording disabled
+PASS R2 disabled history does not collect
+PASS R2 remote turns history on
+PASS R2 uninstalled app launch returns failure
+PASS R2 failed launch has returnable message and never enters history
+PASS R2 successful app launch request
+PASS R2 successful launcher request recorded
+PASS R2 repeat app request accepted
+PASS R2 repeat launch deduplicates
+PASS R2 clear cancel preserves history and caller focus
+PASS R2 confirmed clear preserves record switch
+PASS R2 Back restores all-app toolbar caller
+PASS R2 empty collection focuses Add
+PASS R2 Add opens existing app picker
+PASS R2 picker left edge does not cancel
+PASS R2 picker cancel restores collection caller
+PASS R2 real probe found in picker
+PASS R2 picker adds and focuses new collection app
+PASS R2 collection leaves category binding intact
+PASS R2 collection leaves category binding intact
+PASS R2 collection leaves category binding intact
+PASS R2 collection leaves category binding intact
+PASS R2 legacy favorites preserved
+PASS R2 collection Menu opens order actions
+PASS R2 dialog has sole active focus; background card muted
+PASS R2 Down reaches right move
+PASS R2 move right across row keeps same app focused
+PASS R2 move left restores row position
+PASS R2 end-of-list excludes impossible right move
+PASS R2 remove last card focuses populated neighbor
+PASS R2 full collection does not open unusable picker
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 collection side menu safe area false/0: 802,78 440x563, focused=true, inset=38
+PASS R2 side menu Back restores source card
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 collection side menu safe area false/1: 776,78 440x563, focused=true, inset=64
+PASS R2 side menu Back restores source card
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 collection side menu safe area false/2: 750,78 440x563, focused=true, inset=90
+PASS R2 side menu Back restores source card
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 collection side menu safe area true/0: 802,78 440x563, focused=true, inset=38
+PASS R2 side menu Back restores source card
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 collection side menu safe area true/1: 776,78 440x563, focused=true, inset=64
+PASS R2 side menu Back restores source card
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 collection side menu safe area true/2: 750,78 440x563, focused=true, inset=90
+PASS R2 side menu Back restores source card
+PASS R2 uninstalled app creates no ghost tile and is not silently deleted
+PASS R2 cleanup cancel keeps saved order
+PASS R2 confirmed cleanup removes only missing item
+PASS R2 scan failure shows text state without deleting favorites
+PASS R2 cleanup blocked on failed scan
+PASS R2 corrupt collection has safe empty error UI
+PASS R2 cancel repair does not overwrite corrupt bytes
+PASS R2 explicit repair returns to actionable Add
+PASS R2 nested list Back restores source page and toolbar focus
+PASS R2 recreation bundle preserves picker and return route
+PASS R2 organizer actions do not alter startup state
+PASS R3 gear opens panel focused on font row
+PASS R3 panel alone holds active focus
+PASS R3 Left and Right stay inside panel
+PASS R3 Down reaches and stays at All Settings
+PASS R3 Up reaches panel Back without escaping
+PASS R3 orphan repeat and release do not activate panel row
+PASS R3 closing restores gear and selected category
+PASS R3 font page starts on actual saved value
+PASS R3 navigation changes neither value nor preview/check
+PASS R3 confirm applies large font then updates preview
+PASS R3 extra font persists and preview grows
+PASS R3 font Back restores parent row and current label
+PASS R3 reopened panel reads stored extra font
+PASS R3 saved state retains panel page and focus
+PASS R3 configuration rebuild restores open child panel
+PASS R3 panel margin writes existing preference
+PASS R3 margin Back restores parent row
+PASS R3 motion switch applies existing flag and keeps focus
+PASS R3 device row opens existing device page
+PASS R3 device Back returns to source panel row
+PASS R3 All Settings opens full page
+PASS R3 all nine existing settings remain accessible
+PASS R3 startup page remains reachable
+PASS R3 startup Back restores full settings
+PASS R3 device nested under full settings returns there
+PASS R3 full settings reads same font selection
+PASS R3 full font selection returns to its caller and mirrors legacy preference
+PASS R3 full motion switch shares panel value
+PASS R3 existing update entry remains reachable
+PASS R3 nested full settings return route and values remain synchronized
+PASS R3 system row launches real Android Settings
+PASS R3 return from system Settings restores same panel row
+PASS R3 panel safe bounds 0/0
+PASS R3 right panel labels fit 0/0
+PASS R3 all six rows visible 0/0
+PASS R3 font choices and preview fit 0/0
+PASS R3 margin choices fit 0/0
+PASS R3 panel safe bounds 0/1
+PASS R3 right panel labels fit 0/1
+PASS R3 all six rows visible 0/1
+PASS R3 font choices and preview fit 0/1
+PASS R3 margin choices fit 0/1
+PASS R3 panel safe bounds 0/2
+PASS R3 right panel labels fit 0/2
+PASS R3 all six rows visible 0/2
+PASS R3 font choices and preview fit 0/2
+PASS R3 margin choices fit 0/2
+PASS R3 panel safe bounds 1/0
+PASS R3 right panel labels fit 1/0
+PASS R3 all six rows visible 1/0
+PASS R3 font choices and preview fit 1/0
+PASS R3 margin choices fit 1/0
+PASS R3 panel safe bounds 1/1
+PASS R3 right panel labels fit 1/1
+PASS R3 all six rows visible 1/1
+PASS R3 font choices and preview fit 1/1
+PASS R3 margin choices fit 1/1
+PASS R3 panel safe bounds 1/2
+PASS R3 right panel labels fit 1/2
+PASS R3 all six rows visible 1/2
+PASS R3 font choices and preview fit 1/2
+PASS R3 margin choices fit 1/2
+PASS R3 panel safe bounds 2/0
+PASS R3 right panel labels fit 2/0
+PASS R3 all six rows visible 2/0
+PASS R3 font choices and preview fit 2/0
+PASS R3 margin choices fit 2/0
+PASS R3 extra font fits full settings 0
+PASS R3 extra font fits device cards 0
+PASS R3 extra font fits home heading 0
+PASS R3 panel safe bounds 2/1
+PASS R3 right panel labels fit 2/1
+PASS R3 all six rows visible 2/1
+PASS R3 font choices and preview fit 2/1
+PASS R3 margin choices fit 2/1
+PASS R3 extra font fits full settings 1
+PASS R3 extra font fits device cards 1
+PASS R3 extra font fits home heading 1
+PASS R3 panel safe bounds 2/2
+PASS R3 right panel labels fit 2/2
+PASS R3 all six rows visible 2/2
+PASS R3 font choices and preview fit 2/2
+PASS R3 margin choices fit 2/2
+PASS R3 extra font fits full settings 2
+PASS R3 extra font fits device cards 2
+PASS R3 extra font fits home heading 2
+PASS R3 display actions preserve startup state
+PASS R3 display actions preserve history and collection
+PASS R3 display actions preserve category_0
+PASS R3 display actions preserve category_1
+PASS R3 display actions preserve category_2
+PASS R3 display actions preserve category_3
+PASS R3 display actions preserve favorites
+PASS R3 display actions preserve performance_mode
+PASS R4 family footer adds entry without removing updates
+PASS R4 family panel opens on layout switch
+PASS R4 explicit switch enables optional simple layout
+PASS R4 family Back restores full-settings caller
+PASS R4 simple home has three large actions
+PASS R4 photos action follows existing album category and background
+PASS R4 frequent apps uses existing app library
+PASS R4 library Back restores simple home action
+PASS R4 Down reaches permanent layout/unlock entry
+PASS R4 layout lock persists and close restores entry
+PASS R4 locked unbound action does not edit binding
+PASS R4 lock blocks collection additions
+PASS R4 unlock and exit remain reachable and restore five-entry home
+PASS R4 simple cards fit font/margin 0/0
+PASS R4 family panel text fits 0/0
+PASS R4 config panel text fits 0/0
+PASS R4 config Back restores family row
+PASS R4 simple cards fit font/margin 0/1
+PASS R4 family panel text fits 0/1
+PASS R4 config panel text fits 0/1
+PASS R4 config Back restores family row
+PASS R4 simple cards fit font/margin 0/2
+PASS R4 family panel text fits 0/2
+PASS R4 config panel text fits 0/2
+PASS R4 config Back restores family row
+PASS R4 simple cards fit font/margin 1/0
+PASS R4 family panel text fits 1/0
+PASS R4 config panel text fits 1/0
+PASS R4 config Back restores family row
+PASS R4 simple cards fit font/margin 1/1
+PASS R4 family panel text fits 1/1
+PASS R4 config panel text fits 1/1
+PASS R4 config Back restores family row
+PASS R4 simple cards fit font/margin 1/2
+PASS R4 family panel text fits 1/2
+PASS R4 config panel text fits 1/2
+PASS R4 config Back restores family row
+PASS R4 simple cards fit font/margin 2/0
+PASS R4 family panel text fits 2/0
+PASS R4 config panel text fits 2/0
+PASS R4 config Back restores family row
+PASS R4 simple cards fit font/margin 2/1
+PASS R4 family panel text fits 2/1
+PASS R4 config panel text fits 2/1
+PASS R4 config Back restores family row
+PASS R4 simple cards fit font/margin 2/2
+PASS R4 family panel text fits 2/2
+PASS R4 config panel text fits 2/2
+PASS R4 config Back restores family row
+PASS R4 dialog reached: 本机备份已保存
+PASS R4 manual backup produces readable local file
+PASS R4 portable file excludes boot state, history and legacy slots
+PASS R4 backup result Back returns to source row
+PASS R4 dialog reached: 预览恢复内容
+PASS R4 preview identifies missing apps and explains boot preservation
+PASS R4 preview leaves preferences untouched
+PASS R4 cancel restores config row without changing data
+PASS R4 dialog reached: 预览恢复内容
+PASS R4 remote reaches restore confirmation from scrollable preview
+PASS R4 confirmed restore applies appearance and returns to config row
+PASS R4 missing bindings and collection order survive restore
+PASS R4 restore preserves startup state and keeps confirmation UI foreground
+PASS R4 dialog reached: 预览撤销内容
+PASS R4 undo restores exact previous preferences without touching startup
+PASS R4 undo is consumed after use
+PASS R4 dialog reached: 操作未完成
+PASS R4 unsupported backup causes no partial changes
+PASS R4 dialog reached: 操作未完成
+PASS R4 oversized backup is refused before changes
+PASS R4 dialog reached: 备份文件已导出
+PASS R4 export result writes exact portable file through resolver
+PASS R4 native local-file picker opens on API 28
+PASS R4 file-picker cancel returns to restore row
+PASS R4 file export/import/cancel never modifies startup preferences
+PASS R4 Watch TV launches bound external app and Back restores card
+PASS R4 Photos launches existing album binding and restores card
+PASS R4 standard home still has all original five entries
+PASS dock contains no visible app-name captions
+PASS control exists: 影视
+PASS D-pad moves to Live TV
+PASS D-pad moves to Music
+PASS D-pad moves to Album
+PASS hero tracks selected category
+PASS wallpaper matches selected category
+PASS Up reaches settings
+PASS Down restores previous dock focus
+PASS Down opens all applications
+PASS Back returns to home
+PASS Back restores selected category
+PASS control exists: 影视
+PASS unbound category opens application picker
+PASS control exists: Qiping Test App
+PASS binding returns to home
+PASS category binding is persisted
+PASS control exists: 影视
+PASS bound application launches
+PASS returning app restores launcher
+PASS control exists: 相册
+PASS rapid navigation keeps final wallpaper in sync
+PASS control exists: 桌面设置
+PASS control exists: 全部设置
+PASS control exists: 屏幕边距
+PASS margin dialog focuses saved choice
+PASS Back cancels without changing margin
+PASS dialog dismissal restores preference focus
+PASS control exists: 屏幕边距
+PASS control exists: 较大 · 7%
+PASS choice applies and preserves focus after layout rebuild
+PASS control exists: 屏幕边距
+PASS control exists: 标准 · 5%
+PASS control exists: 显示字号
+PASS control exists: 大号
+PASS font choice persists and keeps focus
+PASS control exists: 设备与性能
+PASS device screen exposes refresh
+PASS control exists: device1
+PASS Android version details are available
+PASS control exists: device5
+PASS control exists: 轻量模式 · 减少图片缓存
+PASS light preference persists
+PASS manual light policy is effective on this device
+PASS control exists: 刷新设备信息
+PASS refresh preserves chosen mode
+PASS control exists: 使用说明
+PASS long help content scrolls with Down
+PASS Right reaches long-help action without touching
+PASS usage dismissal restores focus
+PASS device Back restores settings tile
+PASS control exists: 显示字号
+PASS control exists: 标准
+PASS font choice restores original preference
+PASS control exists: 开机与桌面
+PASS startup settings expose configuration and manual test
+PASS control exists: 启动状态
+PASS startup diagnostic is accessible with remote selection
+PASS diagnostic closes and restores focus
+PASS control exists: 开机自动打开直播
+PASS missing live target prompts selection
+PASS cancel does not enable unconfigured startup
+PASS control exists: 直播应用
+PASS picker cancel preserves binding and focus
+PASS control exists: 直播应用
+PASS control exists: Qiping Test App
+PASS live picker returns to startup settings
+PASS startup shares home live binding
+PASS control exists: 开机自动打开直播
+PASS startup enable persists
+PASS enabling consumes current boot
+PASS enabling does not immediately open target
+PASS control exists: 立即试播
+PASS manual live test launches selected application
+PASS hidden launcher has paused background work
+PASS hidden launcher releases wallpaper references
+PASS hidden launcher drops icon cache
+PASS test returns to startup settings without relaunch
+PASS control exists: 开机自动打开直播
+PASS startup can be disabled
+PASS startup Back restores settings tile focus
+PASS control exists: 界面动效
+PASS Back returns to home
+PASS reduced motion is saved
+PASS control exists: 桌面设置
+PASS control exists: 全部设置
+PASS control exists: 界面动效
+PASS Back returns to home
+PASS control exists: 音乐
+PASS selected category survives restart
+PASS binding survives restart
+PASS performance preference survives restart
+PASS control exists: 桌面设置
+PASS control exists: 全部设置
+PASS control exists: 设备与性能
+PASS control exists: device5
+PASS control exists: 自动适配（推荐）
+PASS auto mode can be restored
+

@@ -1,0 +1,43 @@
+栖屏 0.2.19 · 本轮实际验证记录
+
+一、版本和基线
+Android 9+（最低 API 28），versionCode 21。
+基于 QipingLauncher_0.2.18_AndroidStudio_Source.zip。
+基线 SHA-256：e2565c364afdfd6f0e507b20985f30b806d8dcd0e6ae2fd539b01dd222ff4f5b。
+0.2.18 的 StartupState、StartupFlow、WakeState、WakeFlow、WakeMonitor、BootSession、BootReceiver 文件与基线逐字节一致。本轮在 MainActivity 的统一启动入口与自动启动入口添加家长规则判断。
+
+二、构建与主机逻辑
+使用 OpenJDK 17、Android SDK Platform 28 / 35、Build Tools 35.0.0。
+执行 python3 build_local.py --sdk <SDK> --check-api28 --instrumentation 成功。
+完成 API 28 严格编译、资源链接、DEX、内部测试签名校验及测试包构建；日志见 docs/checks/build.txt。
+没有在本环境执行 Android Studio 的 Gradle 同步；工程沿用 AGP 8.7.3 / Gradle 8.9。
+
+全部 16 组主机检查通过：Favorites、ShortcutStore、DisplayPreferences、ParentalStore、ConfigBackup、AppOrganizer、StartupState、StartupFlow、WakeFlow、PerformancePolicy、GridNavigation、UpdatePolicy、GlassContrast、DiagnosticJournal、Personalization、PhoneWallpaperServer。
+新增 ParentalStore 50 项检查覆盖：初始化、凭据派生与校验、恢复码、连续错误与冷却、规则持久化、允许列表、跨午夜与结束边界、无效时间、写入失败回滚及损坏数据保持限制。
+最终构建包含错误计数溢出的防御性收敛，50 项检查再次通过。
+
+三、Android 9 原生交互
+Android 9 / API 28 x86 模拟器，1280×720、213 dpi，软件仿真。模拟器把请求的 1024 MB 内存调整为 1536 MB，不能据此声称已验证低内存电视的实际性能。
+执行 SettingsFamilyUiChecks 专项，完整流程全部通过：
+- 快捷面板去除旧入口；九张设置卡片及排列正确；原常用位置打开个性设置。
+- 动效、边距、字号可改；四个原自定义子菜单打开与返回正常；回到原卡片焦点。
+- 家庭大卡片保留长辈布局、桌面配置并加入未成年模式。
+- 取消密码设置不创建凭据；方向键数字键盘；两次密码确认；恢复码展示与重新输入确认；没有保存明文密码或恢复码。
+- 空允许列表不能开启；方向键允许实际测试应用；无效时间被拒绝。
+- 开启后只显示允许应用和家长入口；返回不退出；菜单需要验证；错误密码不授权。
+- 允许应用实际打开，返回后保持儿童首页；系统设置 Intent 被统一入口拒绝。
+- 时段外显示休息页，持有旧应用引用仍不能启动；开机与待机唤醒记录本次限制。
+- 正确密码进入家长设置；普通备份保留家长状态；离开后重新验证；恢复码可以恢复密码设置。
+- 家长退出恢复普通首页，保留密码与允许列表；最大字号及边距下密码弹窗仍在屏幕内。
+
+第一次运行被模拟器的“System UI isn't responding”系统弹窗挡住输入焦点，未通过；选择 Wait 后重新完整运行通过，没有改动应用绕过检查。
+最终构建覆盖安装成功，重新启动 MainActivity 返回 Status: ok。
+实际截图在 design/runtime/0.2.19/：settings-large、personal-large、child-home、child-rest；前两张使用特大字号与 7% 边距。密码与恢复码页面禁止系统截屏，未导出含凭据图片。休息页面截图捕获到壁纸加载过渡底色。
+
+四、本轮没有声称完成的验证
+没有海信电视真机重启、遥控器待机唤醒、低内存长时间播放、系统专用按键、语音助手或不同厂商固件测试。
+没有重跑旧版全部 UI 套件、手机传壁纸浏览器端和长时间稳定性专项；相关生产实现与资源保持基线，主机逻辑检查通过。
+模式在重启后恢复的规则存储有主机检查；真机冷启动、待机和覆盖升级后的整体体验仍应按 0.2.19_使用与验收.txt 的 F、G 项确认。
+本版是桌面内限制，不能强制停止外部视频、控制应用内容或阻止系统级绕过。
+
+源码包不包含 APK、SDK、签名文件或构建缓存；内含完整 Android Studio 工程、当前验证资料与历史记录。

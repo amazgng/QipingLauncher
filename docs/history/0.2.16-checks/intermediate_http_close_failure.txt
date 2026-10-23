@@ -1,0 +1,22 @@
+PASS five-category home starts on API 28
+PASS P16 wallpaper menu opens LAN receiver
+PASS P16 receiver binds actual emulator LAN address
+PASS P16 phone page served from packaged assets
+PASS P16 phone style served locally
+PASS P16 phone script served locally
+PASS P16 loopback companion supports Android Studio adb forwarding
+PASS P16 remote skips unavailable actions before upload
+PASS P16 receiver dialog prevents desktop screensaver
+PASS P16 bad upload preserves prior wallpaper
+PASS P16 actual image upload decodes successfully
+PASS P16 received image waits for TV approval
+FAIL java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:215)
+	at java.net.SocketInputStream.read(SocketInputStream.java:144)
+	at java.net.SocketInputStream.read(SocketInputStream.java:130)
+	at cn.wengmang.qiping.tests.PhoneWallpaperUiChecks.request(PhoneWallpaperUiChecks.java:24)
+	at cn.wengmang.qiping.tests.PhoneWallpaperUiChecks.run(PhoneWallpaperUiChecks.java:42)
+	at cn.wengmang.qiping.tests.PhoneWallpaperUiChecks.run(PhoneWallpaperUiChecks.java:10)
+	at cn.wengmang.qiping.tests.LauncherSmoke.onStart(LauncherSmoke.java:76)
+	at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:2145)
+

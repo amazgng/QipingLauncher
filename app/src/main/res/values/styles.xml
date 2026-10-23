@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="android:style/Theme.Holo.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:defaultFocusHighlightEnabled">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">#0B1420</item>
+        <item name="android:windowActionModeOverlay">true</item>
+    </style>
+</resources>

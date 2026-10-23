@@ -1,0 +1,6 @@
+{
+  "name": "示例更新服务（须替换）",
+  "feedUrl": "https://updates.example.com/tv/catalog.json",
+  "storePackage": "cn.example.tvstore",
+  "storeUriTemplate": "market://details?id={package}"
+}

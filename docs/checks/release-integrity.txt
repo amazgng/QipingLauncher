@@ -1,0 +1,5 @@
+PASS versionName 1.0.0 / versionCode 22 in Gradle and Manifest
+PASS minSdk 28 / targetSdk 35
+PASS production permissions unchanged; test export provider absent from production manifest
+PASS boot/wake production sources, all other Java files, assets and resources unchanged from 0.2.19
+PASS original 0.2.19 ZIP SHA-256 0867968fcdee6e8eeb1796ba48f921f36b746ff47b1e5dbf481654707dc0bd5a

@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="color-scheme" content="dark"><title>栖屏 · 手机传壁纸</title><link rel="stylesheet" href="/style.css"><script src="/crop.js" defer></script><script src="/app.js" defer></script></head>
+<body><main><header><span class="brand">Q<span class="dot"></span> 栖屏</span><span id="connection" class="pill">等待连接</span></header>
+<h1>把喜欢的风景，<br>留在电视上。</h1><p class="intro">手机传壁纸 · 先调整构图，再留住这一刻</p>
+<section id="pairing" class="glass" hidden><h2>连接你的电视</h2><p>请输入电视上显示的 6 位配对码。</p><label for="code">配对码</label><input id="code" inputmode="numeric" autocomplete="off" maxlength="6" pattern="[0-9]{6}" placeholder="000000"><button id="pair">连接电视</button></section>
+<section id="editor" class="glass" hidden><label for="scene">用在哪个界面</label><select id="scene"><option value="0">影视</option><option value="1">直播</option><option value="2">音乐</option><option value="3">相册</option><option value="4">全部应用</option><option value="5">设置页面</option></select>
+<label for="file" class="upload" id="fileLabel"><span id="empty"><span class="plus">＋</span><strong id="chooseLabel">选择一张图片</strong><small>JPG、PNG、WebP · 单张不超过 20 MB</small></span></label><input id="file" type="file" accept="image/jpeg,image/png,image/webp" class="file-input">
+<p id="filename" class="filename">横向或竖向照片都可以调整构图</p>
+<div id="cropEditor" hidden>
+<div class="crop-heading"><strong>裁剪后的画面</strong><span>16:9 · 电视比例</span></div>
+<canvas id="preview" width="960" height="540" tabindex="0" role="img" aria-label="壁纸裁剪预览，可拖动图片或用下方滑块调整位置"></canvas>
+<p class="crop-hint">拖动图片移动主体，滑动下方滑块调整大小。</p>
+<div class="slider-label"><label for="zoom">缩放</label><output id="zoomValue" for="zoom">1.00×</output></div><input id="zoom" type="range" min="1" max="3" step="0.01" value="1">
+<div class="position-controls"><div><label for="panX">左右位置</label><input id="panX" type="range" min="-100" max="100" step="1" value="0"></div><div><label for="panY">上下位置</label><input id="panY" type="range" min="-100" max="100" step="1" value="0"></div></div>
+<button id="resetCrop" type="button" class="secondary">恢复居中构图</button><p id="cropQuality" class="crop-hint"></p>
+</div>
+<button id="send" disabled>上传到电视</button><progress id="progress" value="0" max="100" hidden></progress><p class="hint">上传完成后，在电视上按遥控器确认应用。<br>只上传裁剪后的图片，原照片保持不变。</p></section>
+<p id="status" class="status" role="status" aria-live="polite">正在连接电视…</p><p id="error" class="error" role="alert" hidden></p>
+<footer>请让手机和电视连接同一路由器，并保持电视传输页面打开。<br>连接到期或退出电视页面后，需要重新扫码。</footer></main></body></html>

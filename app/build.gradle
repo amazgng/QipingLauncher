@@ -1,0 +1,22 @@
+plugins { id 'com.android.application' }
+
+android {
+    namespace 'cn.wengmang.qiping'
+    compileSdk 35
+    defaultConfig {
+        applicationId 'cn.wengmang.qiping'
+        minSdk 28
+        targetSdk 35
+        versionCode 22
+        versionName '1.0.0'
+        testApplicationId 'cn.wengmang.qiping.tests'
+        testInstrumentationRunner 'cn.wengmang.qiping.tests.LauncherSmoke'
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildTypes {
+        release { minifyEnabled false }
+    }
+}

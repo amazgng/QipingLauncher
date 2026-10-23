@@ -1,0 +1,33 @@
+栖屏 1.0.0 正式版 · 源码使用与验收
+日期：2026-10-22
+
+一、打开与构建
+1. 解压 QipingLauncher_1.0.0_AndroidStudio_Source.zip 到独立英文目录。
+2. Android Studio 打开 qiping-launcher-v1.0.0（包含 settings.gradle 的目录）。
+3. 使用 JDK 17 或 21；SDK Platform 35、Build Tools 35.0.0，沿用 Gradle 8.9 / AGP 8.7.3。
+4. 最低支持 Android 9 / API 28。先运行 app 在横屏模拟器确认，再沿用电视旧版相同签名覆盖安装。
+5. 包名 cn.wengmang.qiping，显示版本 1.0.0，内部 versionCode 22。不必卸载旧版；卸载会丢失私有配置、壁纸和家长规则。
+6. 交付包不含 APK、签名密钥、SDK、构建缓存。build_local.py 生成的是本机测试签名，正式安装请用你一直使用的签名。
+
+二、本版三处修补
+1. 密码连续输错后的冷却：跨重启重新绑定单调计时，系统时间回拨不再造成长期等待。
+2. 配置导出：拒绝选择器提供的直接文件路径，仅通过有效内容提供方写入；应用内备份与固定目录导出仍可使用。
+3. 未成年模式时段：损坏数据暂停放行，由家长重新输入完整起止时间修复，取消不写入半份规则。
+
+三、电视上建议确认
+1. 覆盖升级后，在“设备与性能”确认版本 1.0.0；核对原来的应用绑定、壁纸、显示设置、家长密码和规则仍在。
+2. 家长验证输错 5 次，稍等 30 秒后用正确密码进入；正常修改时段、开启/关闭限制仍可使用。
+3. 家庭与配置 → 桌面配置，备份并导出一份文件，再打开恢复预览，确认内容可读取。无需确认恢复来完成此检查。
+4. 用平时的遥控器关机/开机方式确认仍进入绑定应用；开机与唤醒状态机源码本轮未改动。
+
+本轮完整设置/家庭 UI 回归在当前模拟器中未完成。请先在你的 Android Studio 模拟器确认个性设置、家庭与配置、未成年模式可以正常进入、修改及返回。
+
+系统时间回拨、损坏配置和异常导出结果已提供自动化测试，不需要为了测试在电视上故意改时钟或损坏数据。
+
+四、测试入口（仅限可丢弃的模拟器）
+python3 build_local.py --sdk <SDK路径> --check-api28 --instrumentation
+adb shell am instrument -w -e suite maintenance cn.wengmang.qiping.tests/cn.wengmang.qiping.tests.LauncherSmoke
+adb shell am instrument -w -e suite settings-family cn.wengmang.qiping.tests/cn.wengmang.qiping.tests.LauncherSmoke
+这些测试会改写测试实例的设置并清理家长规则，不要在日常使用的电视上运行。
+
+实际执行范围与结果请看“验证记录.txt”。旧版截图与测试记录仅作为历史参考。

@@ -1,0 +1,5 @@
+package: name='cn.wengmang.qiping' versionCode='17' versionName='0.2.15' platformBuildVersionName='15' platformBuildVersionCode='35' compileSdkVersion='35' compileSdkVersionCodename='15'
+minSdkVersion:'28'
+targetSdkVersion:'35'
+launchable-activity: name='cn.wengmang.qiping.MainActivity'  label='' icon=''
+leanback-launchable-activity: name='cn.wengmang.qiping.MainActivity'  label='' icon='' banner=''

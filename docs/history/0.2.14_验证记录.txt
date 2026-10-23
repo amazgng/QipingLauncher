@@ -1,0 +1,30 @@
+栖屏 0.2.14 · 本轮实际验证记录
+日期：2026-10-20
+基线：0.2.13；包名 cn.wengmang.qiping；versionCode 16。
+
+已执行并通过
+1. 使用 Android 官方 SDK 工具完成资源链接、Java 编译、D8 转换、测试签名与安装验证；额外以 API 28 android.jar 作为 bootclasspath 完成最低系统编译检查。详细输出见 docs/checks/api28_build.txt。
+2. 构建产物元数据核对：最低 API 28 / Android 9、targetSdk 35、版本 0.2.14。见 docs/checks/package_badging.txt。产物只用于内部检查，交付包不含 APK。
+3. Android 9 / API 28 x86 模拟器，1280×720、213 dpi，完整 LauncherSmoke 最终运行 567 项 PASS，0 项 FAIL。原始结果见 docs/checks/android9_instrumentation.txt。
+4. 新增视觉行为检查：真实方向键切换五种背景、保留焦点；相同播放图标随冷色 / 暖色壁纸改变内部颜色；全部设置使用第六套壁纸；返回键先回快捷设置，再回主页。
+5. 回归覆盖：三档边距、字号与安全区域；应用网格边缘翻页；长按管理；模拟更新提醒与商店跳转；最近打开、收藏排序；快捷设置、系统设置跳转；长辈布局与锁定；配置备份、预览、取消、恢复与撤销；文件选择器返回；绑定应用、手动试播与前后台恢复。
+6. 主机逻辑测试通过：Favorites、ShortcutStore 两组场景；DisplayPreferences 40、ConfigBackup 64、AppOrganizer 69、StartupState 34、StartupFlow 54、PerformancePolicy 33、GridNavigation 4308、UpdatePolicy 29 项断言 / 检查。
+7. 采集并逐页核对 20 张本版真实运行截图，见 design/runtime/。检查五类主页、应用相关页面、设置 / 设备 / 开机页、快捷与配置面板、恢复预览和长辈布局。文字可读，图标与卡片随壁纸透色，无系统默认矩形高亮覆盖自定义焦点。
+8. 逐文件核对 15 个核心数据 / 业务模块与 0.2.13 一致，见 docs/0.2.14_改动说明.txt。原版源码 ZIP 的 SHA-256 保持 5e1d6ad52636515d90c5624d5b997e70155c9547d5c46eb449b74586eef5df9d。
+
+检查中处理的问题
+- Android 9 会为自定义焦点控件附加默认矩形高亮：已关闭系统底色，保留玻璃卡片自己的细亮边。
+- 中性玻璃高光已调整，自动检查确认暖色背景不会仍被固定蓝色覆盖。
+- 新测试退出完整设置时补上关闭快捷面板的返回步骤；跨应用断言先等待目标窗口；弹窗边距在 UI 线程等待布局和窗口焦点后读取，避免软件模拟器启动 / 布局异步造成误报。原边距范围与业务断言保留。
+- 模拟器初次启动出现原生 Quickstep / System UI 的无响应提示，关闭系统提示后再执行最终检查；上述 PASS 数仅统计最后完整运行。
+
+验证边界
+- 没有在本环境完成 Android Studio / Gradle 的联网同步；使用的是工程附带 build_local.py 与官方 SDK 的独立构建路线。用户电脑首次同步仍需下载 Gradle 和 Google Maven 依赖。
+- 本轮运行环境为 Android 9 模拟器；没有逐一运行 Android 10 及以上系统或所有电视固件。最低系统设置为 Android 9，compileSdk / targetSdk 35 不代表电视需要升级至 Android 15。
+- 模拟器没有硬件加速，截图设备读数也不是海信电视读数。本轮不报告电视帧率、实机内存降幅或长时间稳定性结论。
+- 电视真正重启后的默认桌面、开机直播、待机唤醒与厂家启动限制仍待海信实机验证。手动试播 / 状态机测试通过不能替代冷启动验证。
+- 更新流程使用本地测试清单与 ProbeActivity，不下载或安装第三方应用；正式更新源继续为空。
+- U 盘与电视文件管理器、真实签名覆盖升级、断电和存储空间不足等情况未在用户设备上执行。
+
+交付检查
+源码包保留 Gradle Wrapper、资源、测试和说明；排除 APK/AAB、签名密钥、SDK、构建与 IDE 缓存及 local.properties。文件哈希见 docs/checks/package_files.json；该清单不包含自身。用户重点验收见“0.2.14_验收说明.txt”。

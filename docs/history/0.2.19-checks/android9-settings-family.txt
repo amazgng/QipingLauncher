@@ -1,0 +1,57 @@
+Android 9 / API 28 instrumentation output, successful complete run:
+PASS five-category home starts on API 28
+PASS FAMILY installed app scan is ready
+PASS FAMILY quick panel no longer duplicates appearance controls
+PASS FAMILY settings card 0 is 开机与桌面
+PASS FAMILY settings card 1 is 家庭与配置
+PASS FAMILY settings card 2 is 网络设置
+PASS FAMILY settings card 3 is 系统设置
+PASS FAMILY settings card 4 is 其他桌面
+PASS FAMILY settings card 5 is 设备与性能
+PASS FAMILY settings card 6 is 应用更新
+PASS FAMILY settings card 7 is 个性设置
+PASS FAMILY settings card 8 is 使用说明
+PASS FAMILY old toolbar/footer and legacy favorites entry removed
+PASS FAMILY original favorites slot opens consolidated settings
+PASS FAMILY motion switch updates existing preference
+PASS FAMILY margin returns to consolidated parent
+PASS FAMILY font updates and returns to consolidated parent
+PASS FAMILY existing destination opens: 首页排列与隐藏
+PASS FAMILY existing destination returns to consolidated parent: 首页排列与隐藏
+PASS FAMILY existing destination opens: 全部应用整理
+PASS FAMILY existing destination returns to consolidated parent: 全部应用整理
+PASS FAMILY existing destination opens: 桌面空闲屏保
+PASS FAMILY existing destination returns to consolidated parent: 桌面空闲屏保
+PASS FAMILY existing destination opens: 本地壁纸
+PASS FAMILY existing destination returns to consolidated parent: 本地壁纸
+PASS FAMILY Back restores original card focus
+PASS FAMILY family card contains existing features plus minor mode
+PASS FAMILY canceling setup does not create credentials
+PASS FAMILY numeric pad supports predictable two-axis navigation
+PASS FAMILY recovery code shown for parent confirmation
+PASS FAMILY setup saves credentials but leaves mode disabled
+PASS FAMILY credentials are not saved as plaintext
+PASS FAMILY empty allowlist prevents enable
+PASS FAMILY remote selects an installed allowed application
+PASS FAMILY invalid time is rejected by entry UI
+PASS FAMILY enable enters child home
+PASS FAMILY child home exposes only approved app and parent gate
+PASS FAMILY Back never exits mode
+PASS FAMILY Menu key cannot open normal settings without authentication
+PASS FAMILY incorrect PIN does not authorize
+PASS FAMILY approved app opens normally
+PASS FAMILY return from application retains child home
+PASS FAMILY central launch gate rejects a system settings intent
+PASS FAMILY closed window changes to rest screen
+PASS FAMILY stale app reference cannot bypass the time gate
+PASS FAMILY cold startup respects parental restriction
+PASS FAMILY wake startup respects the same restriction
+PASS FAMILY correct PIN grants a local parent settings session
+PASS FAMILY desktop backup preserves parental state
+PASS FAMILY leaving parent settings discards authorization
+PASS FAMILY recovery code can authorize password recovery
+PASS FAMILY parent exit restores standard home
+PASS FAMILY exit retains reusable rules and credential
+PASS FAMILY PIN dialog fits maximum font and margin
+
+Earlier attempt: input focus blocked by Android emulator System UI ANR dialog. Dismissed with Wait, then reran this complete suite successfully. See 验证记录.txt for scope and limitations.

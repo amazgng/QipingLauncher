@@ -1,0 +1,78 @@
+Stability cycle 1 / 12
+Stability cycle 2 / 12
+Stability cycle 3 / 12
+Stability cycle 4 / 12
+Stability cycle 5 / 12
+Stability cycle 6 / 12
+Stability cycle 7 / 12
+Stability cycle 8 / 12
+Stability cycle 9 / 12
+Stability cycle 10 / 12
+Stability cycle 11 / 12
+Stability cycle 12 / 12
+PASS five-category home starts on API 28
+PASS cache within budget after cycle 0
+PASS dialog glass references released after cycle 0
+PASS decode queue bounded after cycle 0
+PASS external app releases wallpaper/icons cycle 0
+PASS background sampling paused cycle 0
+MEASURE cycle=0 java=2574944 native=21312392 pssKB=30657
+PASS cache within budget after cycle 1
+PASS dialog glass references released after cycle 1
+PASS decode queue bounded after cycle 1
+MEASURE cycle=1 java=2368120 native=19913304 pssKB=29525
+PASS cache within budget after cycle 2
+PASS dialog glass references released after cycle 2
+PASS decode queue bounded after cycle 2
+PASS external app releases wallpaper/icons cycle 2
+PASS background sampling paused cycle 2
+MEASURE cycle=2 java=2034888 native=15573976 pssKB=33809
+PASS cache within budget after cycle 3
+PASS dialog glass references released after cycle 3
+PASS decode queue bounded after cycle 3
+MEASURE cycle=3 java=2402824 native=20562504 pssKB=30312
+PASS cache within budget after cycle 4
+PASS dialog glass references released after cycle 4
+PASS decode queue bounded after cycle 4
+PASS external app releases wallpaper/icons cycle 4
+PASS background sampling paused cycle 4
+MEASURE cycle=4 java=2586024 native=19306504 pssKB=29222
+PASS cache within budget after cycle 5
+PASS dialog glass references released after cycle 5
+PASS decode queue bounded after cycle 5
+MEASURE cycle=5 java=2515504 native=23021496 pssKB=32908
+PASS cache within budget after cycle 6
+PASS dialog glass references released after cycle 6
+PASS decode queue bounded after cycle 6
+PASS external app releases wallpaper/icons cycle 6
+PASS background sampling paused cycle 6
+MEASURE cycle=6 java=2637696 native=21143248 pssKB=31210
+PASS cache within budget after cycle 7
+PASS dialog glass references released after cycle 7
+PASS decode queue bounded after cycle 7
+MEASURE cycle=7 java=2245168 native=17693008 pssKB=27243
+PASS cache within budget after cycle 8
+PASS dialog glass references released after cycle 8
+PASS decode queue bounded after cycle 8
+PASS external app releases wallpaper/icons cycle 8
+PASS background sampling paused cycle 8
+MEASURE cycle=8 java=2822856 native=23879504 pssKB=35372
+PASS cache within budget after cycle 9
+PASS dialog glass references released after cycle 9
+PASS decode queue bounded after cycle 9
+MEASURE cycle=9 java=2359184 native=19206592 pssKB=28915
+PASS cache within budget after cycle 10
+PASS dialog glass references released after cycle 10
+PASS decode queue bounded after cycle 10
+PASS external app releases wallpaper/icons cycle 10
+PASS background sampling paused cycle 10
+MEASURE cycle=10 java=2873608 native=25314440 pssKB=35240
+PASS cache within budget after cycle 11
+PASS dialog glass references released after cycle 11
+PASS decode queue bounded after cycle 11
+MEASURE cycle=11 java=2460304 native=22607688 pssKB=32452
+PASS Java heap does not grow by 16 MiB after warmup
+PASS real foreground memory timer records a sample
+PASS journal remains bounded during repeated lifecycle changes
+MEASURE stability elapsed_ms=332445
+

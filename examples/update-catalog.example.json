@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "apps": [
+    {
+      "packageName": "cn.example.tvplayer",
+      "versionCode": 42,
+      "versionName": "2.4.0",
+      "minSdk": 14
+    }
+  ]
+}

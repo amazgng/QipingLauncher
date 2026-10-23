@@ -1,0 +1,8 @@
+Intentional Java exception probe on disposable API 28 emulator.
+The instrumentation process crash is expected, not a failed normal-operation check.
+PASS Android original crash handling terminated the intentional test process
+PASS Exception type and Qiping code location saved
+PASS Exception message omitted from persisted journal
+PASS Journal stays within 100 lines / 48 KiB
+PASS Prior exception survives a new application process
+This verifies best-effort Java exception logging, not native crashes, ANR, power loss or OS process kills.

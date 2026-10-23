@@ -1,0 +1,28 @@
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): false
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+PASS: favorites add, full capacity, replace, deduplicate, reorder, restart, remove, corrupt data
+PASS: four category bindings, shared app, replacement, restart, unbind, v1 preservation, bounds
+PASS: DisplayPreferences 40 checks
+PASS: 81 parental checks
+PASS: ConfigBackup 64 checks
+PASS: AppOrganizer 69 checks
+PASS: 34 startup state checks (once per boot, cancel, restart, standby, manual entry, defaults, storage failure, legacy fallback)
+PASS: 54 startup flow regression checks (repeated HOME, overlays, late readiness, cancellation, bounded wait, process restart, standby)
+PASS: WakeFlow 64 event-sequence checks
+PerformancePolicyTest: 33 assertions passed
+GridNavigationTest: 4308 assertions passed
+UpdatePolicyTest: 29 assertions passed
+PASS: GlassContrast 102 checks
+PASS: DiagnosticJournal 12 checks
+APK: <PROJECT_ROOT>/build/standalone/QipingLauncher-1.0.0-test.apk
+PASS: Personalization 25185 checks
+PASS: PhoneWallpaperServer 42 socket/security/state checks
+Instrumentation: <PROJECT_ROOT>/build/standalone/QipingLauncher-1.0.0-androidTest.apk

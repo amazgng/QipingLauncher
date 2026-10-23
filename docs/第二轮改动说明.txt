@@ -1,0 +1,54 @@
+栖屏 0.2.11｜第二轮：常用应用整理
+
+基线与回退
+- 基于已交付的 QipingLauncher_0.2.10_AndroidStudio_Source.zip。
+- 基线 SHA-256：d7723d8d8080bc2bff8e76d84f93cb246dcba9c5399d9b4f605bd95d0147622f。
+- 本包是独立新版本；保留 0.2.10 原工程，不在旧目录上覆盖解压。
+- 回退源码不等于 Android 允许直接降级安装。日常更新使用同一签名覆盖升级，不卸载清数据。
+- 包名 cn.wengmang.qiping，versionName 0.2.11 / versionCode 13；minSdk 14，compile / target 35。
+
+实施范围
+1. 全部应用顶部增加「最近打开」「收藏」，不新增首页 Dock 项，不删除刷新和更新。
+2. 最近打开仅记录本桌面发起且未抛出启动错误的普通应用打开请求，包含手动试播和成功发出的开机直播请求；它不证明外部应用已播放。
+3. 最近记录默认开启，按包名去重、最近请求置顶，上限 12；关闭后不继续采集，已有数据保留；清空需确认。
+4. 收藏是独立上限 12 的顺序列表，可添加、向左 / 右移动、移出；跨行仍按一个位置移动；不卸载应用。
+5. 收藏右侧操作面板使用现有 GlassDialog 遥控器交互，遵守三档边距和两档字号。背景卡片仅微弱标示操作对象，不显示第二个活动焦点。
+6. 应用暂时卸载或停用时隐藏对应卡片、提示数量，不自动丢弃收藏；可明确确认清理不可用项。应用扫描失败时不允许清理。
+7. 损坏的独立列表显示可返回的错误态，未经明确重置不覆盖；启动失败不会进入最近记录，且在新列表内有可关闭的说明。
+8. 返回恢复全部应用的来源页和入口；收藏添加取消返回添加按钮，排序后跟随同一应用，删除后选可用邻居或添加按钮。
+
+偏好兼容与数据范围
+- 新建独立 MODE_PRIVATE SharedPreferences：app_organizer。
+- record_recent：布尔值，缺省 true；错误类型按关闭处理。
+- recent_v1：版本 1 的有限列表，只存包名、组件标识及请求时间。
+- collection_v1：版本 1 的有限列表，只存包名与排列顺序；组件 / 时间占位为空 / 0，不采集额外信息。
+- 新列表解析要求版本正确、最多 12 条、标识合法且无重复；错误时保留原数据，等用户确认修复。
+- 写入检查存储结果；失败提示，不报告已保存。每次数据量有限，没有常驻采集服务、网络轮询或媒体读取。
+- 不迁移、不覆盖 desktop 中 category_0..3、favorites、selected_category、reduce_motion、margin、large_text、performance_mode。
+- StartupState / StartupFlow / BootSession / BootReceiver 及其 token、处理标记、倒计时、诊断存储完全沿用，新增列表不修改启动偏好。
+- 无新增权限、依赖或系统最低版本；更新源 assets/update-source.json 仍是原来的空配置。
+
+新增文件
+- app/src/main/java/cn/wengmang/qiping/AppOrganizer.java：本机最近记录及独立收藏，容量、校验、排序、显式清理、写入结果。
+- tests/AppOrganizerTest.java：持久化逻辑、去重上限、关闭记录、失败请求、跨行顺序、异常数据、失败写入与旧键保护。
+- app/src/androidTest/java/cn/wengmang/qiping/tests/RoundTwoUiChecks.java：真实模拟器中的新入口、记录、添加、排序、返回、六种显示组合与异常流程；应用列表夹具仅在测试包内。
+- docs/第二轮改动说明.txt：本说明。
+
+修改文件
+- app/src/main/java/cn/wengmang/qiping/MainActivity.java：新增两个列表状态与收藏选择状态，复用应用网格；启动结果接入最近记录；上下文菜单和返回路由。
+- app/src/main/java/cn/wengmang/qiping/GlassDialog.java：为收藏操作增加可选右侧位置；方向键和长按释放处理未改。
+- app/src/main/java/cn/wengmang/qiping/AppTileView.java：菜单打开时的低亮度操作对象填充；单一焦点规则沿用。
+- app/src/androidTest/java/cn/wengmang/qiping/tests/LauncherSmoke.java：加入第二轮交互回归。
+- app/src/androidTest/java/cn/wengmang/qiping/tests/RemoteUiChecks.java：允许新增的两个合法工具栏焦点，仍检查刷新与网格返回。
+- app/build.gradle、app/src/main/AndroidManifest.xml：只更新版本号 0.2.11 / 13。
+- build_local.py：更新本机测试输出文件名，纳入 AppOrganizer 主机逻辑检查。
+- README.md、CHANGELOG.md、验证记录.txt：功能、使用、兼容与实际验证结果。
+
+保留检查
+- 原全部应用 2×6、边缘翻页、短末页、手机滑动、绑定选择沿用。
+- 原启动、绑定、性能、网格策略、SceneView、资源、壁纸、正式图标、更新源均做字节比对，未改。
+- MainActivity 的首页、完整设置、设备信息、启动状态机相关方法及生命周期暂停 / 恢复逻辑保持原实现。
+- 本轮没有快捷设置侧栏、第三档字号、长辈布局、备份、在线壁纸、屏保或真实更新接入；收藏操作面板不等于第三轮快捷设置。
+
+本包不含 APK、正式签名密钥、密码、SDK、构建缓存或模拟器数据。
+实际验证结果单独列于根目录「验证记录.txt」。确认第二轮后再实施第三轮。

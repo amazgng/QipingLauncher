@@ -1,0 +1,38 @@
+Initial emulator-only input blocker (not a passing run):
+PASS five-category home starts on API 28
+PASS FAMILY maintenance credentials saved with Android preferences
+PASS FAMILY clock rollback plus reboot retains initial lock
+PASS FAMILY Android persisted cooldown decreases with monotonic time
+PASS FAMILY Android stored lock expires after bounded 30 seconds
+PASS FAMILY damaged rule hides app entries and explains repair
+FAIL java.lang.AssertionError: Input focus not ready: activity, windowFocus=false
+	at cn.wengmang.qiping.tests.TestKeys.awaitInputWindow(TestKeys.java:29)
+	at cn.wengmang.qiping.tests.TestKeys.press(TestKeys.java:49)
+	at cn.wengmang.qiping.tests.SettingsFamilyUiChecks.key(SettingsFamilyUiChecks.java:26)
+	at cn.wengmang.qiping.tests.SettingsFamilyUiChecks.open(SettingsFamilyUiChecks.java:34)
+	at cn.wengmang.qiping.tests.SettingsFamilyUiChecks.runMaintenance(SettingsFamilyUiChecks.java:66)
+	at cn.wengmang.qiping.tests.SettingsFamilyUiChecks.maintenance(SettingsFamilyUiChecks.java:20)
+	at cn.wengmang.qiping.tests.LauncherSmoke.onStart(LauncherSmoke.java:77)
+	at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:2145)
+
+
+PASS five-category home starts on API 28
+PASS FAMILY installed app scan is ready
+FAIL java.lang.AssertionError: Input focus not ready: activity, windowFocus=false
+	at cn.wengmang.qiping.tests.TestKeys.awaitInputWindow(TestKeys.java:29)
+	at cn.wengmang.qiping.tests.TestKeys.press(TestKeys.java:49)
+	at cn.wengmang.qiping.tests.SettingsFamilyUiChecks.key(SettingsFamilyUiChecks.java:26)
+	at cn.wengmang.qiping.tests.SettingsFamilyUiChecks.open(SettingsFamilyUiChecks.java:34)
+	at cn.wengmang.qiping.tests.SettingsFamilyUiChecks.run(SettingsFamilyUiChecks.java:112)
+	at cn.wengmang.qiping.tests.SettingsFamilyUiChecks.run(SettingsFamilyUiChecks.java:19)
+	at cn.wengmang.qiping.tests.LauncherSmoke.onStart(LauncherSmoke.java:78)
+	at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:2145)
+
+
+Observed foreground system dialog:
+  Window #1 Window{410c022 u0 Application Not Responding: com.android.systemui}:
+    WindowStateAnimator{1b2fb6c Application Not Responding: com.android.systemui}:
+       mAnimationIsEntrance=true      mSurface=Surface(name=Application Not Responding: com.android.systemui)/@0x3582535
+  mCurrentFocus=Window{410c022 u0 Application Not Responding: com.android.systemui}
+
+The System UI dialog was dismissed, the launcher selected as test HOME, and the suites rerun.

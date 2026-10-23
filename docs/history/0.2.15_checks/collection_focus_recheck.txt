@@ -1,0 +1,132 @@
+PASS five-category home starts on API 28
+PASS R2 all apps retains old tools and adds both list entries
+PASS R2 Right reaches collection entry
+PASS R2 empty history has actionable focus
+PASS R2 remote turns history off
+PASS R2 successful launch while recording disabled
+PASS R2 disabled history does not collect
+PASS R2 remote turns history on
+PASS R2 uninstalled app launch returns failure
+PASS R2 failed launch has returnable message and never enters history
+PASS R2 successful app launch request
+PASS R2 successful launcher request recorded
+PASS R2 repeat app request accepted
+PASS R2 repeat launch deduplicates
+PASS R2 clear cancel preserves history and caller focus
+PASS R2 confirmed clear preserves record switch
+PASS R2 Back restores all-app toolbar caller
+PASS R2 empty collection focuses Add
+PASS R2 Add opens existing app picker
+PASS R2 picker left edge does not cancel
+PASS R2 picker cancel restores collection caller
+PASS R2 real probe found in picker
+PASS R2 picker adds and focuses new collection app
+PASS R2 collection leaves category binding intact
+PASS R2 collection leaves category binding intact
+PASS R2 collection leaves category binding intact
+PASS R2 collection leaves category binding intact
+PASS R2 legacy favorites preserved
+PASS R2 collection Menu opens order actions
+PASS R2 dialog has sole active focus; background card muted
+PASS R2 Down reaches right move
+PASS R2 move right across row keeps same app focused
+PASS R2 move left restores row position
+PASS R2 end-of-list excludes impossible right move
+PASS R2 remove last card focuses populated neighbor
+PASS R2 full collection does not open unusable picker
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 collection side menu safe area false/0: 802,78 440x563, focused=true, inset=38
+PASS R2 side menu Back restores source card
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 collection side menu safe area false/1: 776,78 440x563, focused=true, inset=64
+PASS R2 side menu Back restores source card
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 collection side menu safe area false/2: 750,78 440x563, focused=true, inset=90
+PASS R2 side menu Back restores source card
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 collection side menu safe area true/0: 802,77 440x566, focused=true, inset=38
+PASS R2 side menu Back restores source card
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 collection side menu safe area true/1: 776,77 440x566, focused=true, inset=64
+PASS R2 side menu Back restores source card
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 toolbar within visible width
+PASS R2 toolbar label fits
+PASS R2 collection side menu safe area true/2: 750,77 440x566, focused=true, inset=90
+PASS R2 side menu Back restores source card
+PASS R2 uninstalled app creates no ghost tile and is not silently deleted
+PASS R2 cleanup cancel keeps saved order
+PASS R2 confirmed cleanup removes only missing item
+PASS R2 scan failure shows text state without deleting favorites
+PASS R2 cleanup blocked on failed scan
+PASS R2 corrupt collection has safe empty error UI
+PASS R2 cancel repair does not overwrite corrupt bytes
+PASS R2 explicit repair returns to actionable Add
+PASS R2 nested list Back restores source page and toolbar focus
+PASS R2 recreation bundle preserves picker and return route
+PASS R2 organizer actions do not alter startup state
+

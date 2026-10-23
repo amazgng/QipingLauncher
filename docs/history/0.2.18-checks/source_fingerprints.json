@@ -1,0 +1,474 @@
+[
+  {
+    "path": "app/src/main/AndroidManifest.xml",
+    "sha256": "1d9108b73d744dcbe31ee2d21c380acc99eeebe40c89e4fe13fecf74c8272cb3"
+  },
+  {
+    "path": "app/src/main/assets/phone-wallpaper/app.js",
+    "sha256": "cf5928a95e70f6ae0b4b7e408fbdab56a463d1523c27c6472df222700fc80cb1"
+  },
+  {
+    "path": "app/src/main/assets/phone-wallpaper/crop.js",
+    "sha256": "189c684b3135ce237240e37b46f331a8ffaaf6b34eef253e4d45e489345a2358"
+  },
+  {
+    "path": "app/src/main/assets/phone-wallpaper/index.html",
+    "sha256": "574a14ddf0416a44f063990f7f5227a7c018204fc9c291a12784eb0dfd9c8c47"
+  },
+  {
+    "path": "app/src/main/assets/phone-wallpaper/style.css",
+    "sha256": "9c394da9ed186a928fe8a5cde5633729b932062a43b7eeea909d7e45a0643d1f"
+  },
+  {
+    "path": "app/src/main/assets/update-source.json",
+    "sha256": "7c352dc9041f2b5942ffac80b10a147dbf923deaab3a48a5e756a8ed24773489"
+  },
+  {
+    "path": "app/src/main/java/cn/wengmang/qiping/AppCatalog.java",
+    "sha256": "61c1d9ae824d9672e0942c02e939b5751b7e2534474c3d6a0f1fdecf551b1871"
+  },
+  {
+    "path": "app/src/main/java/cn/wengmang/qiping/AppEntry.java",
+    "sha256": "fd56a74ca590e0f8577107867b74ac5c690fb904d3584996d15a94a0815aded3"
+  },
+  {
+    "path": "app/src/main/java/cn/wengmang/qiping/AppOrganizer.java",
+    "sha256": "c68e003b773b38fb666194befd889ae65a8ea186a44f0f6df2cce27a4acca997"
+  },
+  {
+    "path": "app/src/main/java/cn/wengmang/qiping/AppTileView.java",
+    "sha256": "9234611f14cbf509274886515ad59ee9b5cece047894ee61b37dae69c9bebe6f"
+  },
+  {
+    "path": "app/src/main/java/cn/wengmang/qiping/BootReceiver.java",
+    "sha256": "f34c1400aa2c30be4ef4c62921afbddd3e87bd33ab5eeabd72883534b2865253"
+  },
+  {
+    "path": "app/src/main/java/cn/wengmang/qiping/BootSession.java",
+    "sha256": "2cff0d5b08b0c6ade7e35dffb5b46f06772396db1ae14893826342d6e16bd3ee"
+  },
+  {
+    "path": "app/src/main/java/cn/wengmang/qiping/ConfigBackup.java",
+    "sha256": "180c0f2d611f1497b0b3bdf738f7bdd30d60dee20aea61c512cf606379a34eae"
+  },
+  {
+    "path": "app/src/main/java/cn/wengmang/qiping/ConfigStore.java",
+    "sha256": "df7dc751e259b9b50d3028d71738795e97ba22df6c39a8ecf10c91186c220323"
+  },
+  {
+    "path": "app/src/main/java/cn/wengmang/qiping/DeviceCard.java",
+    "sha256": "af663b65c4d49c7b26bd00cee7ddeea4a1354c5c64a5fa14af1e2174a5e57d70"
+  },
+  {
+    "path": "app/src/main/java/cn/wengmang/qiping/DeviceInfo.java",
+    "sha256": "7b4c3deb646fa95e4be28fc892c70c8be21b94a192f2bdc7f5d1f80c106237b0"
+  },
+  {
+    "path": "app/src/main/java/cn/wengmang/qiping/DiagnosticJournal.java",
+    "sha256": "457cb99ff3773839f23b6e390efd332ea8816496a1f38da920b09f9a74d8cc9e"
+  },
+  {
+    "path": "app/src/main/java/cn/wengmang/qiping/DisplayPreferences.java",
+    "sha256": "7d841af953adb2d2e01ba6db44879d59355ffc805a0ec1f1c447be445176898e"
+  },
+  {
+    "path": "app/src/main/java/cn/wengmang/qiping/DockTile.java",
+    "sha256": "ebf3024c2c13f948570435127d6257c72a032d86d0b6113cad182fd3c8440a6a"
+  },
+  {
+    "path": "app/src/main/java/cn/wengmang/qiping/ExperiencePolicy.java",
+    "sha256": "db5e386b154e302ad7d986ee759782b168fe3f9db2c2e2733b0aaf15cdada0ab"
+  },
+  {
+    "path": "app/src/main/java/cn/wengmang/qiping/Favorites.java",
+    "sha256": "77297d5467999a8ad571cb8827f2253e8f212fd06879b009556742e3acf3ba34"
+  },
+  {
+    "path": "app/src/main/java/cn/wengmang/qiping/GlassArtwork.java",
+    "sha256": "f3abcbdecfe81a7b51c9f1592b0193afbe845a5cc5b7a9a397c6d081ca79fba6"
+  },
+  {
+    "path": "app/src/main/java/cn/wengmang/qiping/GlassButton.java",
+    "sha256": "1dca05f043ec51ef67efdf987d6cefa87e95f6ff5803d22cd413d344d6ef6439"
+  },
+  {
+    "path": "app/src/main/java/cn/wengmang/qiping/GlassContrast.java",
+    "sha256": "6391637779c68849d11c08f1549e7d464cc00e9f1ddefe79cccc24a4bdc3ae1a"
+  },
+  {
+    "path": "app/src/main/java/cn/wengmang/qiping/GlassDialog.java",
+    "sha256": "6b8fc73a6874b1531b5c7154dfbc2f755f7bffc98209274592e41c1d37248956"
+  },
+  {
+    "path": "app/src/main/java/cn/wengmang/qiping/GlassDock.java",
+    "sha256": "b988a8324e5d2947f007d47a1baff7f9dd56a683ba121e2af283a0b20b8bdc0c"
+  },
+  {
+    "path": "app/src/main/java/cn/wengmang/qiping/GlassPanel.java",
+    "sha256": "4a5cdfa089495dab1867403fea2c05bffc27b3805c23f6b1f04f301d270b4476"
+  },
+  {
+    "path": "app/src/main/java/cn/wengmang/qiping/GlassSymbol.java",
+    "sha256": "07147575adfe9e6aa3927b58129411e09829772a7c5758ffda424736bb01bfad"
+  },
+  {
+    "path": "app/src/main/java/cn/wengmang/qiping/GlyphView.java",
+    "sha256": "fe5245bbe2ff5f76225968b9fe16dd7ed143d2583c287173ecc3b8fa1a498bf5"
+  },
+  {
+    "path": "app/src/main/java/cn/wengmang/qiping/GridNavigation.java",
+    "sha256": "f8dd8db4e0a2be1a06f21fa6f461a332df2471efb32868ddc1be00057d292cc8"
+  },
+  {
+    "path": "app/src/main/java/cn/wengmang/qiping/IconButton.java",
+    "sha256": "3dc1fd7663553bf623a60a550e0dfb3821f8eae9b0c3109535ba76ff76871689"
+  },
+  {
+    "path": "app/src/main/java/cn/wengmang/qiping/IdleClockView.java",
+    "sha256": "e4e16e03c086de7b145c2026b29a7de7679968af255e421888f7afd1403db928"
+  },
+  {
+    "path": "app/src/main/java/cn/wengmang/qiping/LanAddress.java",
+    "sha256": "3863ce860deba5a00cac870ddb72ce8dc50878d07d86afe63bcdb49f34cfdccd"
+  },
+  {
+    "path": "app/src/main/java/cn/wengmang/qiping/MainActivity.java",
+    "sha256": "4154a9e00514902386d17c8a61055d3e5b4f20a571e74213282e78bfcfcdc46c"
+  },
+  {
+    "path": "app/src/main/java/cn/wengmang/qiping/PageEdgeView.java",
+    "sha256": "38e08edac055135694603024e59745e3e0ae633df6f9420a93c19fb1c0ff9374"
+  },
+  {
+    "path": "app/src/main/java/cn/wengmang/qiping/PerformancePolicy.java",
+    "sha256": "6b2639b06565d5547797c4c0bee28c7cbf151bc7b75aac5f063270cd4dd8a2fb"
+  },
+  {
+    "path": "app/src/main/java/cn/wengmang/qiping/PhoneWallpaperDialog.java",
+    "sha256": "554a93d58e5cf2ee7e1b420e7566b20d46a1e711ae0ffa8535f464e1b3832a39"
+  },
+  {
+    "path": "app/src/main/java/cn/wengmang/qiping/PhoneWallpaperServer.java",
+    "sha256": "b615d781acd2e4840f2fd220d35c72254c0712dcb2704a1a82a64df1b76d4911"
+  },
+  {
+    "path": "app/src/main/java/cn/wengmang/qiping/QipingApplication.java",
+    "sha256": "9dc56e081f206e23aa453806d5e5d38cd91950cf0286b9e7128b712d7b01b01c"
+  },
+  {
+    "path": "app/src/main/java/cn/wengmang/qiping/QuickSettingsDialog.java",
+    "sha256": "1dcfd1a1b05bfcb0ec333a45305114791e3fa21711eb5f6b40abeac8c666c340"
+  },
+  {
+    "path": "app/src/main/java/cn/wengmang/qiping/RunDiagnostics.java",
+    "sha256": "ed8c91c12287ca9fcf5dae607dda7877fa0d90e09fe5e663c11522842ce42080"
+  },
+  {
+    "path": "app/src/main/java/cn/wengmang/qiping/SceneView.java",
+    "sha256": "1666cdc98e8502470097808db169d31890e90fe4fbee3158da85fbfa77f70175"
+  },
+  {
+    "path": "app/src/main/java/cn/wengmang/qiping/SettingsTile.java",
+    "sha256": "137d3b6537f1ad5fc4517bd793ab5557c443ab4cde751f529e9cdd75d111b70a"
+  },
+  {
+    "path": "app/src/main/java/cn/wengmang/qiping/ShortcutStore.java",
+    "sha256": "0c5f3f35c030a0677a6610566104eaac48eb8d88ce5f2d7099f7813eab12ad5b"
+  },
+  {
+    "path": "app/src/main/java/cn/wengmang/qiping/SimpleHomeTile.java",
+    "sha256": "ebbbf087083ff67ec69d0ff9c1126cdbe6d015c33051daf27705615983ab50df"
+  },
+  {
+    "path": "app/src/main/java/cn/wengmang/qiping/StageLayout.java",
+    "sha256": "5e9463492de111a314b638c63538c641647aeb80135343a65a33400639e6fffb"
+  },
+  {
+    "path": "app/src/main/java/cn/wengmang/qiping/StartupFlow.java",
+    "sha256": "e2270bc470c8dc8aecd566b899e16f07abb06584b6fac8264daf6263aee9ba61"
+  },
+  {
+    "path": "app/src/main/java/cn/wengmang/qiping/StartupState.java",
+    "sha256": "0c0d9f1b29065fe380f7bffb2cb86d3246e36f4ae806ff9923629958a6ac2685"
+  },
+  {
+    "path": "app/src/main/java/cn/wengmang/qiping/Symbols.java",
+    "sha256": "5515710626463874cc0eac2df6f5f0b5560aaa7060453671b0bab0e1a71ce033"
+  },
+  {
+    "path": "app/src/main/java/cn/wengmang/qiping/TileView.java",
+    "sha256": "fb2458e60d470e460ca1b5805b9b8b677b61ca0f65748e414b786f998bd611af"
+  },
+  {
+    "path": "app/src/main/java/cn/wengmang/qiping/UpdateBadge.java",
+    "sha256": "85c6a53f195ce6b5090c206346fbb54c4946664e3edf2f2f8dcf48db7b06ca76"
+  },
+  {
+    "path": "app/src/main/java/cn/wengmang/qiping/UpdatePolicy.java",
+    "sha256": "f3ca05d86e979d071aaf7505c16635157eb7111f8549557838073cf8ec1d3bca"
+  },
+  {
+    "path": "app/src/main/java/cn/wengmang/qiping/UpdateRepository.java",
+    "sha256": "28b9237ff2359add6c835bd7e6036b706a537532876984f2529fd4ca1f593782"
+  },
+  {
+    "path": "app/src/main/java/cn/wengmang/qiping/WakeFlow.java",
+    "sha256": "f3afd6c4a8099c717bd6bc8db38860bd60950ec0f632bcab22b489b2d5339fdd"
+  },
+  {
+    "path": "app/src/main/java/cn/wengmang/qiping/WakeMonitor.java",
+    "sha256": "9657dd23ae2e319c01c8023d946083c1c932040e7b19c2381887f509d766e706"
+  },
+  {
+    "path": "app/src/main/java/cn/wengmang/qiping/WakeState.java",
+    "sha256": "3addd20da7dcaad3c5b96ca1c8b5fed07b95e2c1d0b0fb9ea536549625b6f34c"
+  },
+  {
+    "path": "app/src/main/java/cn/wengmang/qiping/WallpaperStore.java",
+    "sha256": "138307dac4d8b7540ad0302681eae98016b016ac0319b61349983791acbadf39"
+  },
+  {
+    "path": "app/src/main/java/cn/wengmang/qiping/WorkspaceLayout.java",
+    "sha256": "bd579d7fbe7720a4f7cba211b843bc196b0286b5b95c6ec63e310d7607f214ac"
+  },
+  {
+    "path": "app/src/main/java/io/nayuki/qrcodegen/BitBuffer.java",
+    "sha256": "d5496452b435423beead30aa356e10a7c0ba4790b7da37ee4a1b80b4df136447"
+  },
+  {
+    "path": "app/src/main/java/io/nayuki/qrcodegen/DataTooLongException.java",
+    "sha256": "7661186dde4b27334fd94f4950f58522eaab256274388152e5cb8e35ef463e1a"
+  },
+  {
+    "path": "app/src/main/java/io/nayuki/qrcodegen/QrCode.java",
+    "sha256": "01715baeb383ec26f7c38138299a2b6e5bbfa36fa607441c79dc9cc76b107c6b"
+  },
+  {
+    "path": "app/src/main/java/io/nayuki/qrcodegen/QrSegment.java",
+    "sha256": "70f10e518d3a8f1a1862e598a249abaac036a9c6fae4e5892c4b6d24995bb8d7"
+  },
+  {
+    "path": "app/src/main/res/drawable-anydpi-v26/ic_launcher_foreground.xml",
+    "sha256": "82d512088068fbafcef68c4f53b051714cb19309829e28351f44b6803573ae7d"
+  },
+  {
+    "path": "app/src/main/res/drawable-hdpi/tv_banner.png",
+    "sha256": "01dbb2b31bd023206e40ee2b3dc0a4fcff23a932a16d59e1bfcd6fb5f4d2cd7a"
+  },
+  {
+    "path": "app/src/main/res/drawable-mdpi/tv_banner.png",
+    "sha256": "0c620a4e2ef751133deb322c1d9ec5a4b019380a70b69607da0e593d74ab53af"
+  },
+  {
+    "path": "app/src/main/res/drawable-nodpi/wall_album.png",
+    "sha256": "334785472cc4282975c5d812f55a64bac10a520a6f76d70971aeb341e96c02dd"
+  },
+  {
+    "path": "app/src/main/res/drawable-nodpi/wall_apps.png",
+    "sha256": "e317d3d9a7e3f5484b14ce43cdf1125355bdd5c4d95fd10dc76bb9fdaba31d16"
+  },
+  {
+    "path": "app/src/main/res/drawable-nodpi/wall_film.png",
+    "sha256": "25488aee91833cdacd6a67f28083ef2f764622c07de90596b13c539c8d53a836"
+  },
+  {
+    "path": "app/src/main/res/drawable-nodpi/wall_live.png",
+    "sha256": "e0f0f903b4f463eb4d79bd9a3de2ba529ea34558eb20f98e9e14b5051fda14ba"
+  },
+  {
+    "path": "app/src/main/res/drawable-nodpi/wall_music.png",
+    "sha256": "f7b7400628957a9cfaad1d93c6beaadb4d22598fc23dbd8c5770d0088a607373"
+  },
+  {
+    "path": "app/src/main/res/drawable-nodpi/wall_settings.png",
+    "sha256": "e6c5bc956dccc3bb67e9b2b52be4691814690c93741ab5799842c1035e17520d"
+  },
+  {
+    "path": "app/src/main/res/drawable-xhdpi/tv_banner.png",
+    "sha256": "b4c9adb74ffbb89cd054eac56819bb7c63d644d4074584d038dceb9cee283912"
+  },
+  {
+    "path": "app/src/main/res/drawable-xxhdpi/tv_banner.png",
+    "sha256": "26248276b1db2f8f2c43c4f0590e8da869599cc7f91437b88bc4dd67eceb20ea"
+  },
+  {
+    "path": "app/src/main/res/drawable-xxxhdpi/tv_banner.png",
+    "sha256": "3741df2571f050bc81952ec8a149fd72f038a861d87c5fbd542904559ae68b6c"
+  },
+  {
+    "path": "app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml",
+    "sha256": "32715ff646f6b9fef7c321138e4a14556c4a1f98a87b06070b56f41643dad718"
+  },
+  {
+    "path": "app/src/main/res/mipmap-anydpi-v33/ic_launcher.xml",
+    "sha256": "678da6560d837e905ba0c82a15a11918714729de283138721e85ccc1eb1ee9ff"
+  },
+  {
+    "path": "app/src/main/res/mipmap-hdpi/ic_launcher.png",
+    "sha256": "c4ffd38c727ab8a4fc2559e36fa9fe5e3e2e780fec6dd8b67168adfe064093c2"
+  },
+  {
+    "path": "app/src/main/res/mipmap-mdpi/ic_launcher.png",
+    "sha256": "2059425044cf73bd6b762d53b4cacce3f4bdd76906f070d374658b4d2ae32a94"
+  },
+  {
+    "path": "app/src/main/res/mipmap-xhdpi/ic_launcher.png",
+    "sha256": "40f2b371b7bb38f96baafa7c592eb92c265b1c92aa29820014f1d344074b534d"
+  },
+  {
+    "path": "app/src/main/res/mipmap-xxhdpi/ic_launcher.png",
+    "sha256": "20849fc005daf917061c700e864c5aef504ad1b5e285bdb6db46b79af6e3b029"
+  },
+  {
+    "path": "app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+    "sha256": "fbbce7f2b252bbeb9a389f175f4b260aeb9723d88edb7ce17b6d2014224f942e"
+  },
+  {
+    "path": "app/src/main/res/values/icon_colors.xml",
+    "sha256": "1e82e7e70ecc035b14b61bda27187b37667d590ffe4ef26b93b07b0cd2ddd5e6"
+  },
+  {
+    "path": "app/src/main/res/values/strings.xml",
+    "sha256": "7b601baca1942412116c6d07896a9bb5ad3173fa43f60e430797f91c3e9cdcb9"
+  },
+  {
+    "path": "app/src/main/res/values/styles.xml",
+    "sha256": "b22bd0c2d7bdb6b231a4c5d602d4cd94f3ef061f284c162ce4c187a9cef3af97"
+  },
+  {
+    "path": "app/src/androidTest/AndroidManifest.xml",
+    "sha256": "ba1ccf97e80e0efcd164b24b4d5fd7db30b32e14c8a3fcf2e345cfc5cbd98201"
+  },
+  {
+    "path": "app/src/androidTest/java/cn/wengmang/qiping/tests/GlassThemeChecks.java",
+    "sha256": "90c5d8e76c0f9d2abb49a1f2fb614b62016e9292afbd680c5074d215e3af626c"
+  },
+  {
+    "path": "app/src/androidTest/java/cn/wengmang/qiping/tests/LauncherSmoke.java",
+    "sha256": "f7decdf75c717aa4634879e181ab7e81f3bc0b9d5bebc0c13c2591ac9b85f44c"
+  },
+  {
+    "path": "app/src/androidTest/java/cn/wengmang/qiping/tests/PersonalizationUiChecks.java",
+    "sha256": "2b2c57ca9098e0f8a87c5b32cab96dd8e51b2785431876f8ad69fae734f26424"
+  },
+  {
+    "path": "app/src/androidTest/java/cn/wengmang/qiping/tests/PhoneWallpaperUiChecks.java",
+    "sha256": "f74fb5a05d689715ddb96f3e540494fe60f3f5eafc988b23e3ddf605cace01d8"
+  },
+  {
+    "path": "app/src/androidTest/java/cn/wengmang/qiping/tests/PolishUiChecks.java",
+    "sha256": "ecbd08c456ff9e114e8d1cc516df8603d56a1485a594c9454f67458bdb933e92"
+  },
+  {
+    "path": "app/src/androidTest/java/cn/wengmang/qiping/tests/ProbeActivity.java",
+    "sha256": "2925fbfa3d433b963f3b6b663cf0d8e7c949ec82112e27bb2c8d9facce196c49"
+  },
+  {
+    "path": "app/src/androidTest/java/cn/wengmang/qiping/tests/RemoteUiChecks.java",
+    "sha256": "fd449adfb945aec7077d7915f904bd655378abddcf589cb4118e7bdac0988286"
+  },
+  {
+    "path": "app/src/androidTest/java/cn/wengmang/qiping/tests/RoundFourUiChecks.java",
+    "sha256": "7e9a08153b3c8fb2ca0d02366f426dad50356d722d710829cbc83070a7c79c92"
+  },
+  {
+    "path": "app/src/androidTest/java/cn/wengmang/qiping/tests/RoundOneUiChecks.java",
+    "sha256": "bab284146569fca44058103ea0fafe51d5aebc516de0fb2c60738e256e47fd25"
+  },
+  {
+    "path": "app/src/androidTest/java/cn/wengmang/qiping/tests/RoundThreeUiChecks.java",
+    "sha256": "730ee06c20bb6461a4df59f7891719a163f2386b03a4e00ddeca9eb971c0ccaf"
+  },
+  {
+    "path": "app/src/androidTest/java/cn/wengmang/qiping/tests/RoundTwoUiChecks.java",
+    "sha256": "fcc63b21dde6bf6ec97a4239bd4528ccfa9f13232b3b08830d39e92b1490d191"
+  },
+  {
+    "path": "app/src/androidTest/java/cn/wengmang/qiping/tests/TestKeys.java",
+    "sha256": "b919850e0b1b6f5740188a513a876fc8715d266d8225d16d3ac9f096833797d1"
+  },
+  {
+    "path": "app/src/androidTest/java/cn/wengmang/qiping/tests/WakeUiChecks.java",
+    "sha256": "4a815ed74f3ff81744770e05a475dfdb1241810bf49474671075ae1a2c71a378"
+  },
+  {
+    "path": "tests/AppOrganizerTest.java",
+    "sha256": "2f98a5c473340df103ba7c735cb4f1df1e03791686e9e30c42eedc5f0d1935d2"
+  },
+  {
+    "path": "tests/ConfigBackupTest.java",
+    "sha256": "5388834ab465089bafa583501f105c7e6e5deb623a15dc650146423b7e532223"
+  },
+  {
+    "path": "tests/DiagnosticJournalTest.java",
+    "sha256": "8751dd5facb695b3906d91c6972a7a3940919afadb072258fc8189d9babc86f3"
+  },
+  {
+    "path": "tests/DisplayPreferencesTest.java",
+    "sha256": "5e222f5af618d66cf51215f1e960a84b394ab5d722db0fad1bd83d8cf2a3ea30"
+  },
+  {
+    "path": "tests/FavoritesTest.java",
+    "sha256": "c8b210d7a32a1f6804b6a9c4100cc031a8529318117ab1c477003cf7a4e22756"
+  },
+  {
+    "path": "tests/GlassContrastTest.java",
+    "sha256": "356942c1d358e5cc713f4c008db0ec7ee318a412cb02090995ddc8617fdeaea4"
+  },
+  {
+    "path": "tests/GridNavigationTest.java",
+    "sha256": "d45e04861a22634adfcaffe0fc7a23d64b9df89856b2c2ada3442ba52572c49d"
+  },
+  {
+    "path": "tests/PerformancePolicyTest.java",
+    "sha256": "357f4272f639676be4c7dce208a2160d1b1086df2dfa4836e1bc00c389bdc53e"
+  },
+  {
+    "path": "tests/PersonalizationTest.java",
+    "sha256": "bdd52243a80a3c0cc294b6445cfb421ec5fa2c3c0a9cde802d6042734f392884"
+  },
+  {
+    "path": "tests/PhoneBrowserHarness.java",
+    "sha256": "a4583ff68d8f5414302b97ca86020e1111e7cc144662bdeab36f9596c94ba238"
+  },
+  {
+    "path": "tests/PhoneWallpaperServerTest.java",
+    "sha256": "2ccb071be4e5f048f768cfbb0f1401390cf7b99114165204c82ec398037cff28"
+  },
+  {
+    "path": "tests/ShortcutStoreTest.java",
+    "sha256": "1197642272ea13b2a6170aa47cdf7815a9976d4a04c502ceb8092b3db0f937ac"
+  },
+  {
+    "path": "tests/StartupFlowTest.java",
+    "sha256": "002cb24be5f0a8bd4b3a132e8c658b1ca375cfa5f2667df90e5ce30b82e1ba47"
+  },
+  {
+    "path": "tests/StartupStateTest.java",
+    "sha256": "d54a13eaa4a2aa803d2549e0534625643c9cd1966c3ff9a8d711dbccbc781958"
+  },
+  {
+    "path": "tests/UpdatePolicyTest.java",
+    "sha256": "76d0d835175864ff6e8765544f554f8ee87e7461ad55445d3a36650d2ad756ca"
+  },
+  {
+    "path": "tests/WakeFlowTest.java",
+    "sha256": "bceb7454b49c7c63b9f7ebd596fa3eb5958a7ab7ce72c656df005476e463ce51"
+  },
+  {
+    "path": "tests/crop_test.js",
+    "sha256": "fb766021ebc7129f34866856ca29eb87d58734e3eefbc68e6bd252c4f8585b43"
+  },
+  {
+    "path": "tests/fixtures/crop-orientation6.jpg",
+    "sha256": "13624cf3df69373b43957713381f94b5f51dd3b4a674006f66ce27d6ec289ef3"
+  },
+  {
+    "path": "tests/phone_browser_check.js",
+    "sha256": "72f8af3b2afe14ec2a775c75fb85e53a976aa132215c5ac79d0868db8e1c8a59"
+  },
+  {
+    "path": "tests/phone_crop_browser_check.js",
+    "sha256": "e23d8c8ca145cceb2de7d3ca85ffc03cae3b700dddef1b6493b7533616540a44"
+  }
+]

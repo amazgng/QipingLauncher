@@ -1,0 +1,24 @@
+PASS crop browser portrait opens crop editor
+PASS crop browser preview uses television ratio
+PASS crop browser initial center crop selects middle blue region
+PASS crop browser top position selects red subject
+PASS crop browser bottom position selects green subject
+PASS crop browser zoom updates preview label
+PASS crop browser reset restores center and scale
+PASS crop browser drag moves portrait subject
+PASS crop browser finger drag changes crop
+PASS crop browser pending confirmation locks editing
+PASS crop browser upload is re-encoded JPEG
+PASS crop browser uploaded file is bounded 16:9
+PASS crop browser uploaded pixels match adjusted preview
+PASS crop browser applied image memory is released
+PASS crop browser subsequent polling keeps new crop
+PASS crop browser file name displayed as text
+PASS crop browser file name cannot inject markup
+PASS crop browser crop fits narrow phone
+PASS crop browser invalid replacement clears stale preview
+PASS crop browser unsupported image has conversion guidance
+PASS crop browser phone EXIF rotation applied before crop
+PASS crop browser discard permits crop adjustment and resend
+PASS crop browser no script exceptions
+PASS: Phone crop browser 23 checks

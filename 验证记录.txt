@@ -1,0 +1,57 @@
+栖屏 1.0.0 正式版 · 本轮验证记录
+验证日期：2026-10-22
+基线：QipingLauncher_0.2.19_AndroidStudio_Source.zip
+本包：versionName 1.0.0 / versionCode 22，Android 9+（API 28），compile / target 35。
+
+一、变更与版本一致性
+通过：Gradle、AndroidManifest 与独立构建输出均为 1.0.0 / 22。
+通过：生产权限清单保持不变；测试用内容提供方仅在 androidTest 中，不进入桌面程序。
+通过：逐文件比较，生产改动仅 MainActivity.java、ParentalStore.java、Manifest 版本字段及 app/build.gradle 版本字段。
+通过：开机与待机唤醒代码、其余业务代码、图片与界面资源和网页素材均与 0.2.19 字节一致。
+原始 0.2.19 ZIP SHA-256：0867968fcdee6e8eeb1796ba48f921f36b746ff47b1e5dbf481654707dc0bd5a。
+
+二、构建与主机回归
+实际运行：python3 build_local.py --sdk <本机SDK> --check-api28 --instrumentation。
+通过：AAPT2 资源编译及链接、API 28 严格 bootclasspath 全量 Java 编译、D8 转换、测试包签名校验及 zipalign 校验。
+通过：androidTest 编译、打包；测试包用于本次独立模拟器验证，不包含在交付 ZIP。
+通过：16 组既有主机逻辑 / 网络测试。
+- Favorites：收藏添加、容量、替换、去重、排序、重建、损坏数据。
+- ShortcutStore：四分类绑定、替换、重建、解绑和旧版本兼容。
+- DisplayPreferences：40 项。
+- ParentalStore：81 项（原 50 项，加 31 项本次边界回归）。
+- ConfigBackup：64 项。
+- AppOrganizer：69 项。
+- StartupState：34 项；StartupFlow：54 项；WakeFlow：64 项。
+- PerformancePolicy：33 项；GridNavigation：4308 项；UpdatePolicy：29 项。
+- GlassContrast：102 项；DiagnosticJournal：12 项；Personalization：25185 项。
+- PhoneWallpaperServer：42 项套接字、安全与状态检查。
+主机偏好测试使用项目内存测试实现，不代表真实磁盘故障注入。
+
+三、新增边界用例
+密码冷却：重启后时钟回拨一天、壁钟停止或继续回拨、页面/对象重建、恢复码共享锁定、到期边界、连续重启、同次启动时钟前跳、迁移写入失败与恢复，以及损坏的冷却记录。
+时段规则：字符串/错误数字类型、缺失一端、旧默认时间两字段均未保存的兼容、新启用时显式保存两端、损坏规则拒绝放行、修复写入失败、恢复跨午夜时段。
+
+四、Android 9 交互专项
+环境：Android 9 / API 28，x86，1280×720，模拟器配置 1536 MB RAM，无硬件加速。
+通过：安装版本实际为 1.0.0 / 22，桌面活动可启动并取得前台焦点。
+通过：maintenance 专项 20 条通过记录（含首页启动），没有失败项。
+- 使用 Android 原生 SharedPreferences 验证冷却持久化、剩余计时和到期恢复。
+- 通过传入不同启动标识及回拨时间模拟跨重启情形；没有真实修改模拟器系统日期。
+- 损坏时段停止放行并提示；家长密码验证、遥控器两步录入、返回取消、相同起止时间拒绝、完整保存均通过。
+- 向实际导出结果处理回调注入 file://、带路径回退的 file://、https://、缺少提供方和不分层的 content: 地址，原私有哨兵文件保持不变。
+- 有效测试内容提供方的正常导出字节一致；应用内文件备份可以预览；固定应用目录导出正常。
+这验证了返回结果处理路径和 Android 文件接口，没有安装独立恶意文件选择器进行端到端攻击测试。
+
+未完成：完整 settings-family 菜单与家庭功能回归。
+第一次受模拟器 System UI 无响应弹窗拦截；再次运行时 Android 系统进程发生 SurfaceControl.finalize 超时，套件被系统中止。
+改用 swangle 软件渲染并重启后，桌面正常显示、安装版本核对成功，但完整套件在 480 秒内未返回结果，已停止等待，不计为通过。第二次超时的具体原因未确定。
+随后桌面启动请求返回 Status: ok，窗口焦点属于栖屏；重启后的 crash 缓冲区无记录。这些检查不能替代完整菜单回归。
+以上中断和超时均保留日志。建议在用户电脑有硬件加速的 Android Studio 模拟器补充设置菜单、未成年模式的正常往返检查。
+
+五、验证范围
+本轮检查以本包的独立 SDK 构建和 Android 9 验证为准；未重新执行 Gradle 在线依赖下载构建。
+海信电视 0.2.19 的正常运行及开机打开绑定程序已由用户确认；本轮未改其启动状态机。1.0.0 在海信真机上的签名覆盖升级与厂商电源行为，仍需按“1.0.0_使用与验收.txt”检查。
+Android 10 及以上没有逐版本运行本轮交互测试。本次验证也不等于对所有第三方文件选择器、所有系统修改版本的兼容性保证。
+design/runtime 下截图和 docs/history 的记录均属于历史版本；本轮证据在 docs/checks/。
+
+关键证据：docs/checks/build.txt、package-badging.txt、release-integrity.txt、source_fingerprints.json、test-build-hashes.json，以及本轮 Android 9 专项日志。

@@ -1,0 +1,16 @@
+.gradle/
+.idea/
+local.properties
+**/build/
+*.jks
+*.keystore
+
+# Local signing and generated packages
+test-signing/
+*.apk
+*.aab
+*.apks
+.env
+.env.*
+key.properties
+keystore.properties

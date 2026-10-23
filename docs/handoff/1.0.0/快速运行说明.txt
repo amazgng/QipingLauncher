@@ -1,0 +1,83 @@
+栖屏 1.0.0 快速运行与构建
+
+一、Android Studio 打开
+1. 解压交接包，再解压 QipingLauncher_1.0.0_AndroidStudio_Source.zip。
+2. Open 选择 qiping-launcher-v1.0.0 文件夹，里面应能看到 settings.gradle。
+3. Gradle JDK 选择 17 或 21；安装 SDK Platform 35、Build Tools 35.0.0。
+4. 等待 Gradle 同步。工程使用 Gradle 8.9、AGP 8.7.3。
+5. 建立带硬件加速的 Android 9 / API 28 横屏模拟器，建议 1280×720，运行 app。
+6. 用方向键、Enter、返回测试。设置默认桌面时在模拟器系统中选栖屏。
+
+二、常规命令行构建
+在源码根目录执行；以下由用户本机生成测试 APK，不是本交接包内已有文件。
+
+Windows PowerShell：
+.\gradlew.bat :app:assembleDebug
+
+macOS / Linux：
+./gradlew :app:assembleDebug
+
+若 Unix 解压工具未保留可执行标志，可先执行 chmod +x gradlew。
+常规 debug 输出位于 app/build/outputs/apk/debug/。
+本轮已记录的构建依据是独立 SDK 构建；Gradle 在线下载构建需在本机完成确认。
+
+三、独立 SDK 验证与自动专项
+仅在可丢弃的测试模拟器使用。自动专项会修改设置和清除测试实例的家长规则。
+额外安装 SDK Platform 28，确保 Java 17 或 21、keytool、Python 3 可用。
+将命令中的 SDK 路径替换为自己本机的 SDK 目录。
+
+python3 build_local.py --sdk "你的SDK路径" --check-api28 --instrumentation
+
+Windows 可使用本机可用的 python 或 py -3 替代 python3。
+该脚本在 build/standalone/ 生成以下本机测试产物：
+QipingLauncher-1.0.0-test.apk
+QipingLauncher-1.0.0-androidTest.apk
+脚本还会在 test-signing/ 创建本机测试密钥；不要将它当正式更新密钥。
+
+将 adb 加入 PATH，并确认 adb devices 中仅选中目标测试模拟器。
+有多台设备时须使用 adb -s <设备序列号> 指定测试目标；不要误装到日常电视。
+
+adb install -r build/standalone/QipingLauncher-1.0.0-test.apk
+adb install -r build/standalone/QipingLauncher-1.0.0-androidTest.apk
+
+修补专项：
+adb shell am instrument -w -e suite maintenance cn.wengmang.qiping.tests/cn.wengmang.qiping.tests.LauncherSmoke
+
+设置与家庭专项：
+adb shell am instrument -w -e suite settings-family cn.wengmang.qiping.tests/cn.wengmang.qiping.tests.LauncherSmoke
+
+手机传图专项：
+adb shell am instrument -w -e suite phone cn.wengmang.qiping.tests/cn.wengmang.qiping.tests.LauncherSmoke
+
+待机唤醒专项，先将测试模拟器默认 HOME 设置为栖屏：
+adb shell am instrument -w -e suite wake cn.wengmang.qiping.tests/cn.wengmang.qiping.tests.LauncherSmoke
+
+无 suite 参数或 suite all 不代表所有历史 UI 全部执行。部分旧入口已迁移，历史专项不是当前完整验收依据。
+脚本会修改测试实例；如测试签名与旧测试安装冲突，使用全新的可丢弃模拟器，不对日常设备清除或卸载。
+
+四、用电脑浏览器测试模拟器传壁纸
+先在模拟器打开手机传壁纸页，查看该页显示的端口。
+将 <电视端口> 替换为实际数值，不保留尖括号：
+
+adb forward tcp:8765 tcp:<电视端口>
+
+电脑浏览器打开 http://127.0.0.1:8765/ ，按页面要求输入电视配对码。
+此地址供电脑自身浏览器使用，不是手机通过家庭 Wi-Fi 访问的地址。
+测试结束可执行：
+adb forward --remove tcp:8765
+
+五、电视覆盖升级
+优先用 Android Studio 先仿真，再使用电视现有安装的原签名生成安装包。
+包名必须仍为 cn.wengmang.qiping，本版 versionCode 为 22。
+不要用本机临时测试签名替代电视现有签名，不要为覆盖升级先卸载。
+原签名不在本包内，密钥及密码由用户在本机保管。
+
+六、源码完整性核对
+Windows PowerShell：
+Get-FileHash .\QipingLauncher_1.0.0_AndroidStudio_Source.zip -Algorithm SHA256
+
+Linux：
+sha256sum QipingLauncher_1.0.0_AndroidStudio_Source.zip
+
+预期值：
+15f48415d63a19a8a57efc09b4e4acc3a7620741cf1e6aa976e2e502c4407e0f

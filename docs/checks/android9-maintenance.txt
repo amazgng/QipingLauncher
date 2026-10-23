@@ -1,0 +1,21 @@
+PASS five-category home starts on API 28
+PASS FAMILY maintenance credentials saved with Android preferences
+PASS FAMILY clock rollback plus reboot retains initial lock
+PASS FAMILY Android persisted cooldown decreases with monotonic time
+PASS FAMILY Android stored lock expires after bounded 30 seconds
+PASS FAMILY damaged rule hides app entries and explains repair
+PASS FAMILY parent schedule page explains invalid rule
+PASS FAMILY first repair step never saves half a window
+PASS FAMILY canceling repair preserves closed gate
+PASS FAMILY repair rejects zero-length window
+PASS FAMILY remote repair saves both times and keeps schedule enabled
+PASS FAMILY repaired Android rule validates
+PASS FAMILY external export rejects file destination without writing private file
+PASS FAMILY external export rejects file destination without writing private file
+PASS FAMILY external export rejects https destination without writing private file
+PASS FAMILY external export rejects content destination without writing private file
+PASS FAMILY external export rejects content destination without writing private file
+PASS FAMILY valid content provider export preserves exact backup bytes
+PASS FAMILY trusted internal file backup still opens restore preview
+PASS FAMILY no-picker fallback writes only fixed app backup directory
+

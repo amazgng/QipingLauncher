@@ -1,0 +1,55 @@
+栖屏 0.2.12｜第三轮：快捷设置
+
+基线与回退
+- 基于已交付的 QipingLauncher_0.2.11_AndroidStudio_Source.zip。
+- 基线 SHA-256：a1ced61dd43288d97eefc0841d8429bff7e37382d1f97259d86e3eb01c4533ef。
+- 以独立目录交付，0.2.11 原始包未修改。解压时保留旧工程，不覆盖旧目录。
+- 包名 cn.wengmang.qiping，versionName 0.2.12 / versionCode 14；minSdk 14，compile / target 35。
+- 继续用用户原签名覆盖升级；本包不包含密钥，不需提供签名密码。Android 可能拒绝直接安装低 versionCode，回退源码不代表可直接降级安装。
+
+实施范围
+1. 首页右上角原齿轮打开安全区内的右侧快捷设置；共六行：字号大小、屏幕边距、界面动效、设备与性能、系统设置、全部设置。
+2. 沿用原场景、GlassPanel/GlassButton 与 Symbols 符号；不新增实时截图模糊、在线主题或新的界面框架。
+3. 字号页提供标准 / 大号 / 特大，方向键只移动焦点；明确按确定并保存成功后更新字体、选中勾与文字预览。仅影响栖屏内部文字。
+4. 边距仍为 3% / 5% / 7%，与完整设置共用原字段；界面动效由原「背景动效」改名，继续影响背景过渡与焦点动画。
+5. 打开侧栏保留来源焦点；上下移动限制在当前面板，左右不穿透；子页返回恢复父行，关闭返回齿轮。新面板收到没有配对按下的确定键重复/释放时不激活首项。
+6. 从设备页返回其侧栏行；从全部设置进入开机、设备、更新等子页后，按原层级退回完整设置，再退回侧栏「全部设置」。配置变化和状态 Bundle 保留侧栏页与焦点。
+7. 完整设置的全部九项能力，以及启动状态、使用说明、原更新入口仍可达。系统设置使用真实 Android Intent 跳转，外观由原厂固件决定；Home / 音量不在新面板的自定义按键分支中。
+8. 特大文字复用现有全局布局单位，只有文字加大；设置及设备卡片补足必要行高，标准 / 大号保留原布局尺寸。
+
+偏好兼容
+- SharedPreferences 文件仍为 desktop，原绑定、旧六槽常用、收藏和最近记录不迁移、不清空。
+- 新 font_size：整数 0=标准、1=大号、2=特大；只有用户明确选字号才写入。
+- 读取优先使用有效 font_size。没有此键、值越界或类型损坏时，回退原 large_text：false=标准、true=大号。读取不进行隐式写入。
+- 写入字号时同时写 font_size 和 large_text；0 对应 false，1/2 对应 true。旧版本只能显示原两档，会把特大当大字；新版本已有有效 font_size 时优先该值。
+- 标准 / 大号像素字号与原来相同；特大在原大字号基础上增加 10%，不改变电视系统字体设置。
+- margin（0 / 1 / 2）和 reduce_motion（关闭动效时 true）继续使用原字段与语义；完整设置与快捷设置读取同一份值。
+- 侧栏写入使用 commit 结果；失败时恢复受影响的内存值、提示失败，不提前改变勾选或预览；不改动同一偏好文件的其他字段。
+- 未新增启动 token、开机执行状态、后台服务、网络轮询、系统权限或第三方依赖。
+
+新增文件
+- app/src/main/java/cn/wengmang/qiping/DisplayPreferences.java：三档字号、旧字段只读兼容、边距和动效保存结果。
+- app/src/main/java/cn/wengmang/qiping/QuickSettingsDialog.java：右侧面板、字号/边距子页、实际值预览、局部方向导航与来源恢复。
+- tests/DisplayPreferencesTest.java：旧值映射、新旧字段同步、越界/损坏、保存失败回滚、无关字段保留。
+- app/src/androidTest/java/cn/wengmang/qiping/tests/RoundThreeUiChecks.java：面板导航、返回链、配置变化、共享值、字体/边距组合、系统设置往返。
+- docs/第三轮改动说明.txt：本说明。
+
+修改文件
+- app/src/main/java/cn/wengmang/qiping/MainActivity.java：齿轮入口、通用 Dialog 托管、侧栏与全页的返回路径、状态保存、字号读值、设置文案、使用说明。
+- app/src/main/java/cn/wengmang/qiping/AppTileView.java：特大模式的应用名称字号。
+- app/src/main/java/cn/wengmang/qiping/SettingsTile.java：特大文字及对应标题行高。
+- app/src/main/java/cn/wengmang/qiping/DeviceCard.java：特大文字及对应内容行高/位置。
+- app/src/main/java/cn/wengmang/qiping/GlassDialog.java：既有弹窗文字遵守第三档字号。
+- app/src/androidTest/java/cn/wengmang/qiping/tests/LauncherSmoke.java：接入第三轮检查；旧流程从「全部设置」进入，旧字体切换检查改为三档选择。
+- app/build.gradle、app/src/main/AndroidManifest.xml：版本更新为 0.2.12 / 14。
+- build_local.py：版本输出名与新增 DisplayPreferences 主机检查。
+- README.md、CHANGELOG.md、验证记录.txt：功能与入口、兼容说明、实际验收结果。
+
+保留与未实施项
+- StartupFlow、StartupState、BootSession、BootReceiver、ShortcutStore、Favorites、PerformancePolicy、GridNavigation、AppCatalog、StageLayout、SceneView、UpdateRepository、AppOrganizer 与 0.2.11 字节一致。
+- 全部原 res/、assets/ 与基线字节一致，包括正式图标、五类壁纸和空 update-source.json。
+- MainActivity 的启动检查、暂停/取消、诊断、生命周期暂停/恢复、原按键/触摸分派、目录刷新及性能策略方法做独立差异核对。
+- 真正海信系统重启自启动仍待用户验证，不能把模拟器按键或逻辑检查当作实机已通过。
+- 第四轮长辈布局、配置备份与屏保均未实施；在线壁纸与真实更新服务继续暂停。
+
+完整验证结果见根目录「验证记录.txt」。本包不含 APK、私钥、密码、SDK、构建缓存或模拟器数据。

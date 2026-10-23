@@ -1,0 +1,9 @@
+10-21 18:43:10.750  2450  2456 F libc    : Fatal signal 11 (SIGSEGV), code 1 (SEGV_MAPERR), fault addr 0x0 in tid 2456 (Binder:2450_1), pid 2450 (cmd)
+10-21 18:50:16.589  1867  1876 E AndroidRuntime: *** FATAL EXCEPTION IN SYSTEM PROCESS: FinalizerWatchdogDaemon
+10-21 18:50:16.589  1867  1876 E AndroidRuntime: java.util.concurrent.TimeoutException: android.view.SurfaceControl.finalize() timed out after 10 seconds
+10-21 18:50:16.589  1867  1876 E AndroidRuntime: 	at android.view.SurfaceControl.nativeRelease(Native Method)
+10-21 18:50:16.589  1867  1876 E AndroidRuntime: 	at android.view.SurfaceControl.finalize(SurfaceControl.java:670)
+10-21 18:50:16.589  1867  1876 E AndroidRuntime: 	at java.lang.Daemons$FinalizerDaemon.doFinalize(Daemons.java:250)
+10-21 18:50:16.589  1867  1876 E AndroidRuntime: 	at java.lang.Daemons$FinalizerDaemon.runInternal(Daemons.java:237)
+10-21 18:50:16.589  1867  1876 E AndroidRuntime: 	at java.lang.Daemons$Daemon.run(Daemons.java:103)
+10-21 18:50:16.589  1867  1876 E AndroidRuntime: 	at java.lang.Thread.run(Thread.java:764)

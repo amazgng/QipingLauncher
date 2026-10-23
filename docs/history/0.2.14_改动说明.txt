@@ -1,0 +1,28 @@
+0.2.14 改动说明
+
+基线：0.2.13；新版本：0.2.14 / versionCode 16。
+新工作副本独立制作，原 0.2.13 源码包保留。
+
+视觉：
+- 六套纯风景资源替换 / 新增，位置在 res/drawable-nodpi。
+- SceneView 增加设置场景，移除旧音乐封面式构图；为图标提供共用壁纸的轮廓绘制。
+- Symbols 缓存既有形状的填充轮廓；新增 GlassSymbol 绘制透色、高光、细边。
+- 新增 GlassArtwork，保留第三方图标识别色并增加透明度与受透明轮廓限制的高光。
+- DockTile、IconButton、SettingsTile、GlassButton、SimpleHomeTile、AppTileView、QuickSettingsDialog、PageEdgeView 统一使用玻璃图标。
+- GlassPanel 调整各层遮色和次要文字对比；Android 8+ 原生默认矩形焦点高亮关闭，仍保留自定义亮边。
+
+兼容：
+- app/build.gradle、主 Manifest、独立构建 / 测试包的最低 API 全部为 28。
+- compileSdk / targetSdk 35、AGP 8.7.3、Gradle 8.9、Java 8 源码级别继续沿用。
+- 移除仅给 API 14–18 的旧存储权限声明。
+- 新增 GlassThemeChecks，验证真实按键切换、壁纸透色和设置场景。
+- 测试脚本退出全部设置后先关闭返回的快捷面板；外部应用跳转先等待目标窗口再验证焦点，避免软件模拟器的进程启动耗时造成误报。弹窗边距检查等待窗口完成布局并取得焦点，在主线程读取位置；保留原有边距断言，并额外确认返回键确实关闭弹窗。
+
+本次未变更的核心模块已逐文件核对：
+StartupFlow, StartupState, BootReceiver, ConfigBackup, ConfigStore, ShortcutStore, AppOrganizer, Favorites, GridNavigation, DisplayPreferences, PerformancePolicy, UpdatePolicy, UpdateRepository, AppCatalog, StageLayout.
+
+MainActivity 只改图标构造传入背景对象、玻璃失效刷新注册、设置场景路由和最低系统说明。
+BootSession、DeviceInfo、GlassDialog、GlyphView 的最低系统相关注释更新，不改它们的既有判断逻辑。
+
+电视开机直播仍待真实重启验证，本轮没有另改开机策略。
+具体执行结果见根目录“验证记录.txt”，用户重点检查见“0.2.14_验收说明.txt”。

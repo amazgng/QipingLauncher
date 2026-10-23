@@ -1,0 +1,4 @@
+NOT COMPLETED: settings-family UI suite
+First attempt: System UI ANR intercepted input; next run aborted after SurfaceControl finalizer timeout in Android system process.
+Retry with swangle: timed out at 480 seconds without a complete suite result. No pass is claimed.
+

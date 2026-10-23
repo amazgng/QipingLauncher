@@ -1,0 +1,37 @@
+PASS five-category home starts on API 28
+PASS P16 wallpaper menu opens LAN receiver
+PASS P16 receiver binds actual emulator LAN address
+PASS P16 phone page served from packaged assets
+PASS P16 phone style served locally
+PASS P16 phone script served locally
+PASS P16 loopback companion supports Android Studio adb forwarding
+PASS P16 remote skips unavailable actions before upload
+PASS P16 receiver dialog prevents desktop screensaver
+PASS P16 bad upload preserves prior wallpaper
+PASS P16 actual image upload decodes successfully
+PASS P16 received image waits for TV approval
+PASS P16 second phone upload cannot replace pending image
+PASS P16 Left reaches discard action
+PASS P16 remote discard keeps previous wallpaper
+PASS P16 remote confirms prepared wallpaper atomically
+PASS P16 confirmed file differs from previous wallpaper
+PASS P16 stored image retains landscape dimensions
+PASS P16 phone sees TV acceptance
+PASS P16 another category can be uploaded in same session
+PASS P16 other category preserved 0
+PASS P16 other category preserved 2
+PASS P16 other category preserved 3
+PASS P16 other category preserved 4
+PASS P16 Back stops receiver immediately
+PASS P16 Back closes network port
+PASS P16 session staging cleaned after exit
+PASS P16 Back returns to wallpaper actions
+PASS P16 reopening creates a new pairing session
+PASS P16 old QR no longer authorizes new receiver
+PASS P16 external app pause closes transfer screen
+PASS P16 unconfirmed image not applied when backgrounded
+PASS P16 returning does not reopen reception automatically
+PASS P16 receiver fits widest safe margins
+PASS P16 expired receiver offers remote reconnect
+PASS P16 remote reconnect starts a fresh session
+

@@ -1,0 +1,206 @@
+PASS five-category home starts on API 28
+PASS glass: installed package requires Android 9 / API 28
+PASS glass: control dock0
+PASS glass: wallpaper decoded for scene 0
+PASS glass: wallpaper decoded for scene 1
+PASS glass: D-pad focus retained on category 1
+PASS glass: wallpaper decoded for scene 2
+PASS glass: D-pad focus retained on category 2
+PASS glass: wallpaper decoded for scene 3
+PASS glass: D-pad focus retained on category 3
+PASS glass: same play glyph changes pigment with wallpaper
+PASS glass: glass inherits cool coast and warm dune hues (ff616c7a / ff5f5957)
+PASS glass: wallpaper decoded for scene 4
+PASS glass: D-pad focus retained on category 4
+PASS glass: control home_settings
+PASS glass: glass quick settings available
+PASS glass: wallpaper decoded for scene 5
+PASS glass: full settings uses dedicated mist wallpaper
+PASS glass: Back from full settings restores quick settings
+PASS glass: Back closes quick settings before the next test
+PASS glass: control dock0
+PASS glass: wallpaper decoded for scene 0
+PASS horizontal dock fits: margin=0, large=0, entry=0
+PASS horizontal dock fits: margin=0, large=0, entry=1
+PASS horizontal dock fits: margin=0, large=0, entry=2
+PASS horizontal dock fits: margin=0, large=0, entry=3
+PASS horizontal dock fits: margin=0, large=0, entry=4
+PASS hero text fits: margin=0, large=0
+PASS settings heading fits: margin=0, large=0, entry=0
+PASS settings heading fits: margin=0, large=0, entry=1
+PASS settings heading fits: margin=0, large=0, entry=2
+PASS settings heading fits: margin=0, large=0, entry=3
+PASS settings heading fits: margin=0, large=0, entry=4
+PASS settings heading fits: margin=0, large=0, entry=5
+PASS settings heading fits: margin=0, large=0, entry=6
+PASS settings heading fits: margin=0, large=0, entry=7
+PASS settings heading fits: margin=0, large=0, entry=8
+PASS margin dialog opens in display combination 0/0
+PASS dialog stays in safe area 0/0
+PASS background focus clears while dialog is active 0/0
+PASS dialog returns focus 0/0
+PASS horizontal dock fits: margin=0, large=1, entry=0
+PASS horizontal dock fits: margin=0, large=1, entry=1
+PASS horizontal dock fits: margin=0, large=1, entry=2
+PASS horizontal dock fits: margin=0, large=1, entry=3
+PASS horizontal dock fits: margin=0, large=1, entry=4
+PASS hero text fits: margin=0, large=1
+PASS settings heading fits: margin=0, large=1, entry=0
+PASS settings heading fits: margin=0, large=1, entry=1
+PASS settings heading fits: margin=0, large=1, entry=2
+PASS settings heading fits: margin=0, large=1, entry=3
+PASS settings heading fits: margin=0, large=1, entry=4
+PASS settings heading fits: margin=0, large=1, entry=5
+PASS settings heading fits: margin=0, large=1, entry=6
+PASS settings heading fits: margin=0, large=1, entry=7
+PASS settings heading fits: margin=0, large=1, entry=8
+PASS margin dialog opens in display combination 0/1
+PASS dialog stays in safe area 0/1
+PASS background focus clears while dialog is active 0/1
+PASS dialog returns focus 0/1
+PASS horizontal dock fits: margin=1, large=0, entry=0
+PASS horizontal dock fits: margin=1, large=0, entry=1
+PASS horizontal dock fits: margin=1, large=0, entry=2
+PASS horizontal dock fits: margin=1, large=0, entry=3
+PASS horizontal dock fits: margin=1, large=0, entry=4
+PASS hero text fits: margin=1, large=0
+PASS settings heading fits: margin=1, large=0, entry=0
+PASS settings heading fits: margin=1, large=0, entry=1
+PASS settings heading fits: margin=1, large=0, entry=2
+PASS settings heading fits: margin=1, large=0, entry=3
+PASS settings heading fits: margin=1, large=0, entry=4
+PASS settings heading fits: margin=1, large=0, entry=5
+PASS settings heading fits: margin=1, large=0, entry=6
+PASS settings heading fits: margin=1, large=0, entry=7
+PASS settings heading fits: margin=1, large=0, entry=8
+PASS margin dialog opens in display combination 1/0
+PASS dialog stays in safe area 1/0
+PASS background focus clears while dialog is active 1/0
+PASS dialog returns focus 1/0
+PASS horizontal dock fits: margin=1, large=1, entry=0
+PASS horizontal dock fits: margin=1, large=1, entry=1
+PASS horizontal dock fits: margin=1, large=1, entry=2
+PASS horizontal dock fits: margin=1, large=1, entry=3
+PASS horizontal dock fits: margin=1, large=1, entry=4
+PASS hero text fits: margin=1, large=1
+PASS settings heading fits: margin=1, large=1, entry=0
+PASS settings heading fits: margin=1, large=1, entry=1
+PASS settings heading fits: margin=1, large=1, entry=2
+PASS settings heading fits: margin=1, large=1, entry=3
+PASS settings heading fits: margin=1, large=1, entry=4
+PASS settings heading fits: margin=1, large=1, entry=5
+PASS settings heading fits: margin=1, large=1, entry=6
+PASS settings heading fits: margin=1, large=1, entry=7
+PASS settings heading fits: margin=1, large=1, entry=8
+PASS margin dialog opens in display combination 1/1
+PASS dialog stays in safe area 1/1
+PASS background focus clears while dialog is active 1/1
+PASS dialog returns focus 1/1
+PASS horizontal dock fits: margin=2, large=0, entry=0
+PASS horizontal dock fits: margin=2, large=0, entry=1
+PASS horizontal dock fits: margin=2, large=0, entry=2
+PASS horizontal dock fits: margin=2, large=0, entry=3
+PASS horizontal dock fits: margin=2, large=0, entry=4
+PASS hero text fits: margin=2, large=0
+PASS settings heading fits: margin=2, large=0, entry=0
+PASS settings heading fits: margin=2, large=0, entry=1
+PASS settings heading fits: margin=2, large=0, entry=2
+PASS settings heading fits: margin=2, large=0, entry=3
+PASS settings heading fits: margin=2, large=0, entry=4
+PASS settings heading fits: margin=2, large=0, entry=5
+PASS settings heading fits: margin=2, large=0, entry=6
+PASS settings heading fits: margin=2, large=0, entry=7
+PASS settings heading fits: margin=2, large=0, entry=8
+PASS margin dialog opens in display combination 2/0
+PASS dialog stays in safe area 2/0
+PASS background focus clears while dialog is active 2/0
+PASS dialog returns focus 2/0
+PASS horizontal dock fits: margin=2, large=1, entry=0
+PASS horizontal dock fits: margin=2, large=1, entry=1
+PASS horizontal dock fits: margin=2, large=1, entry=2
+PASS horizontal dock fits: margin=2, large=1, entry=3
+PASS horizontal dock fits: margin=2, large=1, entry=4
+PASS hero text fits: margin=2, large=1
+PASS settings heading fits: margin=2, large=1, entry=0
+PASS settings heading fits: margin=2, large=1, entry=1
+PASS settings heading fits: margin=2, large=1, entry=2
+PASS settings heading fits: margin=2, large=1, entry=3
+PASS settings heading fits: margin=2, large=1, entry=4
+PASS settings heading fits: margin=2, large=1, entry=5
+PASS settings heading fits: margin=2, large=1, entry=6
+PASS settings heading fits: margin=2, large=1, entry=7
+PASS settings heading fits: margin=2, large=1, entry=8
+PASS margin dialog opens in display combination 2/1
+PASS dialog stays in safe area 2/1
+PASS background focus clears while dialog is active 2/1
+PASS dialog returns focus 2/1
+PASS selected category does not keep a second focus ring in toolbar
+PASS no page buttons in application grid
+PASS right edge pages to same first row
+PASS left edge returns to previous row end
+PASS second-row edge preserves row
+PASS second-row back page restores edge
+PASS one-item final page is reachable
+PASS final edge never focuses empty slots
+PASS short final page returns to populated row
+PASS top row reaches a focusable toolbar control: apps_updates
+PASS toolbar Right reaches refresh
+PASS toolbar down restores prior grid focus
+PASS menu key opens app management
+PASS closing management preserves grid focus
+PASS long center opens management without a Menu button
+PASS releasing long center does not activate first dialog action
+PASS left edge of first normal page returns home
+PASS home right edge enters all apps
+PASS left edge never cancels app binding
+PASS real JSON parser accepts valid update catalog
+PASS malformed catalog rejected
+PASS malformed catalog rejected
+PASS malformed catalog rejected
+PASS malformed catalog rejected
+PASS bound home tile receives update badge
+PASS normal OK on badged app offers remote update action
+PASS update dialog supports horizontal footer navigation
+PASS postponing retains truthful update badge
+PASS installed newer version clears application badge
+PASS app grid shares home update state
+PASS remote update action opens configured test-store activity
+PASS returning from store restores launcher
+PASS R2 all apps retains old tools and adds both list entries
+PASS R2 Right reaches collection entry
+PASS R2 empty history has actionable focus
+PASS R2 remote turns history off
+PASS R2 successful launch while recording disabled
+PASS R2 disabled history does not collect
+PASS R2 remote turns history on
+PASS R2 uninstalled app launch returns failure
+PASS R2 failed launch has returnable message and never enters history
+PASS R2 successful app launch request
+PASS R2 successful launcher request recorded
+PASS R2 repeat app request accepted
+PASS R2 repeat launch deduplicates
+PASS R2 clear cancel preserves history and caller focus
+PASS R2 confirmed clear preserves record switch
+PASS R2 Back restores all-app toolbar caller
+PASS R2 empty collection focuses Add
+PASS R2 Add opens existing app picker
+PASS R2 picker left edge does not cancel
+PASS R2 picker cancel restores collection caller
+PASS R2 real probe found in picker
+PASS R2 picker adds and focuses new collection app
+PASS R2 collection leaves category binding intact
+PASS R2 collection leaves category binding intact
+PASS R2 collection leaves category binding intact
+PASS R2 collection leaves category binding intact
+PASS R2 legacy favorites preserved
+PASS R2 collection Menu opens order actions
+PASS R2 dialog has sole active focus; background card muted
+PASS R2 Down reaches right move
+PASS R2 move right across row keeps same app focused
+FAIL java.lang.AssertionError: move left restores row position
+	at cn.wengmang.qiping.tests.RoundTwoUiChecks.check(RoundTwoUiChecks.java:29)
+	at cn.wengmang.qiping.tests.RoundTwoUiChecks.run(RoundTwoUiChecks.java:140)
+	at cn.wengmang.qiping.tests.RoundTwoUiChecks.run(RoundTwoUiChecks.java:28)
+	at cn.wengmang.qiping.tests.LauncherSmoke.onStart(LauncherSmoke.java:82)
+	at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:2145)
+

@@ -1,0 +1,10 @@
+Final internal build installed with adb install -r: Success.
+Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.HOME] cmp=cn.wengmang.qiping/.MainActivity }
+Status: ok
+Activity: cn.wengmang.qiping/.MainActivity
+ThisTime: 3815
+TotalTime: 3815
+WaitTime: 4038
+Complete
+  EXIT 0
+

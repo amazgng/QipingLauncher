@@ -1,0 +1,41 @@
+栖屏 0.2.10 · 第一轮视觉精修
+基线：0.2.9 / versionCode 11；当前 0.2.10 / versionCode 12。
+原始源码 ZIP SHA256：1eb9f53f6d013c93683d934aff177309117e5eb0e299e8c6adae4049044e760e
+原始 ZIP 单独保留作为回退。源码可回退不代表 Android 允许直接降级安装低 versionCode；电视上应保持原签名，必要时以更高版本号重新构建旧源码。
+
+偏好兼容：不新增字段，不迁移、不清空设置；保留 category_0..3、旧版常用、margin、large_text、reduce_motion、performance_mode 与 startup 数据。
+已核对 StartupFlow、StartupState、BootSession、BootReceiver、ShortcutStore、PerformancePolicy、GridNavigation、StageLayout 与全部 res/assets 字节一致。
+MainActivity 仅修改五个页面构造方法与文本颜色常量；启动、生命周期、按键、触摸、应用绑定等方法未改动。
+
+修改文件：
+- CHANGELOG.md
+- README.md
+- app/build.gradle
+- app/src/androidTest/java/cn/wengmang/qiping/tests/LauncherSmoke.java
+- app/src/androidTest/java/cn/wengmang/qiping/tests/RemoteUiChecks.java
+- app/src/main/AndroidManifest.xml
+- app/src/main/java/cn/wengmang/qiping/AppTileView.java
+- app/src/main/java/cn/wengmang/qiping/DeviceCard.java
+- app/src/main/java/cn/wengmang/qiping/DockTile.java
+- app/src/main/java/cn/wengmang/qiping/GlassButton.java
+- app/src/main/java/cn/wengmang/qiping/GlassDialog.java
+- app/src/main/java/cn/wengmang/qiping/GlassDock.java
+- app/src/main/java/cn/wengmang/qiping/GlassPanel.java
+- app/src/main/java/cn/wengmang/qiping/IconButton.java
+- app/src/main/java/cn/wengmang/qiping/MainActivity.java
+- app/src/main/java/cn/wengmang/qiping/PageEdgeView.java
+- app/src/main/java/cn/wengmang/qiping/SceneView.java
+- app/src/main/java/cn/wengmang/qiping/SettingsTile.java
+- app/src/main/java/cn/wengmang/qiping/Symbols.java
+- build_local.py
+- docs/主页底栏适配.md
+- docs/设计与资源.md
+- 验证记录.txt
+
+新增文件：
+- app/src/androidTest/java/cn/wengmang/qiping/tests/RoundOneUiChecks.java
+- app/src/androidTest/java/cn/wengmang/qiping/tests/TestKeys.java
+- docs/四轮实施规范.txt
+- docs/第一轮改动说明.txt
+
+测试代码增加窗口等待和跨应用输入支持，不改变生产权限或导航规则。测试结果见根目录验证记录.txt。

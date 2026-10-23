@@ -1,0 +1,41 @@
+PASS five-category home starts on API 28
+PASS WAKE application scan completes before configuration
+PASS WAKE test launcher is the real default HOME
+PASS WAKE Down reaches wake switch from second card row
+PASS WAKE unbound target prompts selection without enabling
+PASS WAKE remote enables independent wake option
+PASS WAKE wake option preserves cold boot preference
+PASS WAKE enabling does not start an immediate countdown
+PASS WAKE large font 1 keeps startup_wake inside display
+PASS WAKE large font 1 keeps startup_status inside display
+PASS WAKE Down reaches diagnostic footer at font 1
+PASS WAKE large font 2 keeps startup_wake inside display
+PASS WAKE large font 2 keeps startup_status inside display
+PASS WAKE Down reaches diagnostic footer at font 2
+PASS WAKE actual Android interactive state sleeps
+PASS WAKE actual Android interactive state wakes
+PASS WAKE visible HOME enters wake countdown
+PASS WAKE real sleep/wake opens bound application
+PASS WAKE one sleep/wake pair increments sequence once
+PASS WAKE actual Android interactive state sleeps
+PASS WAKE actual Android interactive state wakes
+PASS WAKE sleep/wake inside live keeps that app and does not arm HOME relaunch
+PASS WAKE Back from live stays on desktop without relaunch
+PASS WAKE external-app wake decision appears in diagnostics
+PASS WAKE ordinary app round trip is not a new wake
+PASS WAKE ordinary resume leaves wake sequence unchanged
+PASS WAKE actual Android interactive state sleeps
+PASS WAKE actual Android interactive state wakes
+PASS WAKE visible HOME enters wake countdown
+PASS WAKE Back during wake countdown cancels only this attempt
+PASS WAKE cancellation is diagnosed
+PASS WAKE actual Android interactive state sleeps
+PASS WAKE actual Android interactive state wakes
+PASS WAKE visible HOME enters wake countdown
+PASS WAKE next remote power cycle works after cancellation
+PASS WAKE remote disables wake option
+PASS WAKE actual Android interactive state sleeps
+PASS WAKE actual Android interactive state wakes
+PASS WAKE disabled wake option keeps HOME visible
+PASS WAKE disabled mode does not arm a launch
+

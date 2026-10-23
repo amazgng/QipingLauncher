@@ -1,0 +1,14 @@
+versionCode=22 minSdk=28 targetSdk=35
+versionName=1.0.0
+
+Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=cn.wengmang.qiping/.MainActivity }
+Warning: Activity not started, intent has been delivered to currently running top-most instance.
+Status: ok
+Activity: cn.wengmang.qiping/.MainActivity
+ThisTime: 0
+TotalTime: 0
+WaitTime: 73
+Complete
+
+  mCurrentFocus=Window{9bbf427 u0 cn.wengmang.qiping/cn.wengmang.qiping.MainActivity}
+  mFocusedApp=AppWindowToken{3dcde0 token=Token{7b67fe3 ActivityRecord{d2fafba u0 cn.wengmang.qiping/.MainActivity t4}}}

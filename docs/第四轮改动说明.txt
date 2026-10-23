@@ -1,0 +1,70 @@
+栖屏 0.2.13｜第四轮：长辈布局与本地配置备份
+
+基线与回退
+- 基于已交付 QipingLauncher_0.2.12_AndroidStudio_Source.zip，原包保留不改。
+- 基线 SHA-256：7bb3f5876a0fb5df288f8babf71b4298e364d6d03c488327720bdec5d2d56816。
+- 新工程独立目录；versionName 0.2.13 / versionCode 15，包名 cn.wengmang.qiping、minSdk 14、compile/target 35 不变。
+- 继续用原签名覆盖升级。不含密钥，不需提交密码；Android 可能拒绝低 versionCode，回退源码不是直接降级安装承诺。
+
+实施内容
+1. 原完整设置的九项卡片及更新入口保留，底部新增「家庭与配置」。
+2. 可选三入口长辈首页，直播/相册沿用原绑定，常用应用进入已有应用库；背景仍随入口变化。关闭回原五入口，标准首页比例、顺序不变。
+3. 「布局与解锁」常驻长辈首页底部，可用方向键进入。锁定只保护绑定和收藏编辑；可以启动应用、使用设置、解锁，不构成安全隔离。
+4. 同款本地文件面板提供备份、恢复、撤销；图标为文件导入/导出，说明文字无伪按钮。
+5. 手动备份先保存本机私有副本，保留最近 5 份。可另存为文件；导出或选择取消后回原行。
+6. 恢复先读取、严格校验、显示内容与缺失应用，再确认应用。无效文件不写偏好。未安装应用保留包标识，不代为安装；收藏正常列表只显示当前可用项并注明缺失数量。
+7. 写入前保存白名单字段原值；双偏好提交失败尝试回滚，未完成的事务由下次启动先恢复。成功后保留一个撤销点，撤销也需要预览和确认；撤销成功即消耗该点。手动备份不受撤销影响。
+8. 本轮没有新增在线服务、定时网络请求、屏保、媒体扫描或播放器。正式标志、五类背景、空 update-source.json 原样保留。
+
+偏好与备份白名单
+- 新增 desktop.simple_home、desktop.layout_locked，缺省 false；首次升级仅按缺省读取，不主动写入或迁移旧数据。
+- 备份/恢复四类 category_0..3（包名或空字符串）与 app_organizer.collection_v1（最多 12 项，顺序保留）。同一个应用可绑定多个分类，收藏内重复项不允许。
+- 外观字段：font_size 0/1/2、margin 0/1/2、reduce_motion 布尔、performance_mode 0/1、simple_home 布尔、layout_locked 布尔。
+- 可移植文件仅存三档 font；恢复时同步 desktop.font_size 和兼容旧 large_text。撤销保留原始有/无键及原始值，读取预览不会隐式迁移。
+- 不读写 startup 偏好文件，不导出 live_enabled、handled_boot、启动令牌、诊断或等待时间；也不导出 selected_category、最近记录、记录开关、旧 favorites 六槽、外部 App 数据、媒体、密钥、默认桌面授权。
+- 其他偏好键保留。恢复后不会立即拉起直播；若本机开机直播原已开启，下次真正系统重启将使用恢复后的直播绑定，预览会说明此点。
+- 布局锁定时允许备份；恢复和撤销需要先解锁。若备份中锁定为开，确认恢复后会锁定，退出/解锁入口仍可用。
+
+文件格式与事务
+- .qiping 是版本 1 的本地文本格式：固定标识、版本、创建时间、白名单字段及 SHA-256 完整性校验，最大 32768 字节。它不是加密备份。
+- 未知/重复/遗漏字段、越界值、重复收藏、不支持版本、截断/损坏/超限文件均在提交前拒绝。
+- 私有 config-backups/ 保存手动副本及 restore.pending / restore.undo。内部回退快照不是可导出的配置文件，只保存白名单原值。
+- 文件先写同目录临时文件、同步再重命名；提交前持久保存原值。双 SharedPreferences 不能跨文件原子提交，使用日志回滚；失败仍未回滚时阻止继续编辑，并提供重试还原/系统设置入口。
+- 应用被终止时尚未确认的预览不自动应用；重新进入后重新选择文件。没有声称磁盘硬件故障或任意强杀时点都完成过真机验证。
+- 应用内副本和应用专属外部目录会随卸载/清除数据丢失，需要留存的文件请复制到应用之外。
+
+API 14–18 / 19+ 文件路径
+- 19+ 导出使用 ACTION_CREATE_DOCUMENT、导入使用 ACTION_OPEN_DOCUMENT；只读写用户选择的 URI，EXTRA_LOCAL_ONLY 请求本地文件。
+- 缺少文档保存器时导出到 getExternalFilesDir(null)/backups 并显示完整路径。导入先回退 ACTION_GET_CONTENT；仍无处理程序时提供应用内备份入口。
+- 14–18 导出直接使用应用专属外部目录，导入用 ACTION_GET_CONTENT；仅对 maxSdkVersion=18 声明 WRITE_EXTERNAL_STORAGE。没有提高 minSdk，没有向 Android 9 请求广泛存储权限。
+- 原厂文件选择器是否支持遥控器/U 盘由电视固件决定；本轮不能把 API 19 模拟器结果当作海信文件管理器验收。
+- 官方核对来源：
+  https://developer.android.com/training/data-storage/shared/documents-files
+  https://developer.android.com/guide/topics/manifest/uses-permission-element
+  https://developer.android.com/training/data-storage/app-specific
+
+新增文件
+- app/src/main/java/cn/wengmang/qiping/SimpleHomeTile.java
+- app/src/main/java/cn/wengmang/qiping/ConfigBackup.java
+- app/src/main/java/cn/wengmang/qiping/ConfigStore.java
+- app/src/androidTest/java/cn/wengmang/qiping/tests/RoundFourUiChecks.java
+- tests/ConfigBackupTest.java
+- docs/第四轮改动说明.txt
+- 第四轮验收清单.txt
+
+修改文件
+- MainActivity.java：可选首页、入口/焦点路由、编辑锁、异步文件操作、预览/确认/撤销/失败回退及使用说明；倒计时焦点适配长辈卡片，原启动状态规则保留。
+- QuickSettingsDialog.java：新增家庭与配置/桌面配置两页及局部返回焦点，原快捷设置六行不变。
+- DisplayPreferences.java：新增两项家庭偏好的校验保存。
+- Symbols.java：文件导入/导出及锁符号。
+- app/src/androidTest/java/cn/wengmang/qiping/tests/LauncherSmoke.java：加入第四轮检查。
+- app/build.gradle、app/src/main/AndroidManifest.xml：版本更新；Manifest 增加仅旧系统的存储权限。
+- build_local.py：新版本输出名与 ConfigBackup 主机检查。
+- README.md、CHANGELOG.md、验证记录.txt：入口、兼容、实际结果与边界。
+
+保留的关键实现
+- StartupFlow、StartupState、BootSession、BootReceiver、ShortcutStore、Favorites、PerformancePolicy、GridNavigation、AppCatalog、StageLayout、SceneView、UpdateRepository、AppOrganizer 与 0.2.12 字节一致。
+- MainActivity 是明确改动文件：不将其整个文件或全部生命周期声称为字节一致；详见实际差异。启动取消/等待/一次性语义继续回归。
+- 原 res/、assets/ 的文件集合及字节保持一致；原 Gradle Wrapper 和 Android Studio 结构保留。
+
+实际编译、主机逻辑、模拟器和电视结果分别记录在根目录「验证记录.txt」。

@@ -1,0 +1,1 @@
+PASS: QR decoded from actual Android 9 reception screen; exact active session URL recovered.
